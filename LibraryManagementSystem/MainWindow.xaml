@@ -4,19 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem"
+        
         mc:Ignorable="d"
-        Title="Library Management System" MinHeight="550" MinWidth="850" MaxHeight="850" MaxWidth="1300">
+        Title="Library Management System" MinHeight="550" MinWidth="850" Height="550" Width="850">
     <Grid>
-        <Menu HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="1292">
+        <!-- Main grid row and column defintions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu bar control -->
+        <Menu HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="1500" Grid.ColumnSpan="2">
             <MenuItem Header="File" Height="31" Width="37"/>
             <MenuItem Header="Options" Height="34" Width="61"/>
             <MenuItem Header="Help" Height="34" Width="44">
-                <MenuItem Header="Library Management System" Height="40" Margin="0,0,0,0"/>
-                <MenuItem Header="About Author" HorizontalAlignment="Left" Height="40" Width="239" Margin="0,0,-3,0"/>
+                <MenuItem Header="Library Management System" Height="30" Margin="0,0,0,0"/>
+                <MenuItem Header="About Author" HorizontalAlignment="Left" Height="30" Width="239" Margin="0,0,-3,0"/>
             </MenuItem>
         </Menu>
-        
-        
-     
+        <Grid>
+            <!-- Secondary grid Row and Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <Button Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+                <Button Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+                <Button Content="Manage Loans" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+                <Button Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+            </StackPanel>
+
+
+        </Grid>
     </Grid>
 </Window>
