@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="850" Width="1300">
+        Title="Library Management System" MinHeight="550" MinWidth="850" MaxHeight="850" MaxWidth="1300">
     <Grid>
+        <Menu HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="1292">
+            <MenuItem Header="File" Height="31" Width="37"/>
+            <MenuItem Header="Options" Height="34" Width="61"/>
+            <MenuItem Header="Help" Height="34" Width="44">
+                <MenuItem Header="Library Management System" Height="40" Margin="0,0,0,0"/>
+                <MenuItem Header="About Author" HorizontalAlignment="Left" Height="40" Width="239" Margin="0,0,-3,0"/>
+            </MenuItem>
+        </Menu>
         
+        
+     
     </Grid>
 </Window>
