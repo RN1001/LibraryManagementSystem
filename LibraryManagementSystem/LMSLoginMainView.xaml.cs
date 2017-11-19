@@ -24,6 +24,13 @@ namespace LibraryManagementSystem
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Button that log the user into the application to start using.
+        /// default username and password has been set until database is added to solution
+        /// and will have an admin type username and password.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new MainWindow();
