@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem"
-        
+        HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
-        Title="Library Management System" MinHeight="550" MinWidth="850" Height="550" Width="850">
+        Title="Library Management System" MinHeight="550" MinWidth="850" Height="550" Width="850" MaxHeight="550" MaxWidth="850">
     <Grid>
         <!-- Main grid row and column defintions -->
         <Grid.ColumnDefinitions>
@@ -15,10 +15,10 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menu bar control -->
-        <Menu HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="1500" Grid.ColumnSpan="2">
-            <MenuItem Header="File" Height="31" Width="37"/>
-            <MenuItem Header="Options" Height="34" Width="61"/>
-            <MenuItem Header="Help" Height="34" Width="44">
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="850" Grid.ColumnSpan="2" Margin="0,0,-8,0">
+            <MenuItem Header="File" Height="20" Width="37"/>
+            <MenuItem Header="Options" Height="20" Width="61"/>
+            <MenuItem Header="Help" Height="20" Width="44">
                 <MenuItem Header="Library Management System" Height="30" Margin="0,0,0,0"/>
                 <MenuItem Header="About Author" HorizontalAlignment="Left" Height="30" Width="239" Margin="0,0,-3,0"/>
             </MenuItem>
