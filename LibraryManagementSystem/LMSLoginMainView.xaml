@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem"
         mc:Ignorable="d"
-        Title="Library Management System Log in" MinHeight="300" MinWidth="300" Height="300" Width="300" MaxHeight="300" MaxWidth="300"
+        Title="LMS Log in" MinHeight="300" MinWidth="300" Height="300" Width="300" MaxHeight="300" MaxWidth="300"
         HorizontalAlignment="Center" VerticalAlignment="Center">        
     <Grid>
         <Button x:Name="LoginButton" Content="Log in" VerticalAlignment="Bottom" Margin="190,0,27,20" Click="Button_Click"/>
@@ -13,8 +13,7 @@
         <Label Content="Password:" HorizontalAlignment="Left" Margin="42,143,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="UsernameTbx" HorizontalAlignment="Left" Height="23" Margin="113,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
         <PasswordBox x:Name="PasswordTbx" HorizontalAlignment="Left" Height="23" Margin="113,146,0,0" VerticalAlignment="Top" Width="152" PasswordChar="*"/>
-        <Label x:Name="ErrorLabel" Content="" HorizontalAlignment="Left" Margin="49,189,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ErrorLabel" Content="" HorizontalAlignment="Left" Margin="49,189,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="Red"/>
         <Label Content="Please log in with your credentials" HorizontalAlignment="Left" Margin="49,35,0,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei"/>
-
     </Grid>
 </Window>
