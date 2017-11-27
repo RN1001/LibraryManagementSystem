@@ -24,5 +24,17 @@ namespace LibraryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMembersUC.Visibility = Visibility.Visible;
+            ManageBooksUC.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ManageBooksUC.Visibility = Visibility.Visible;
+            ManageMembersUC.Visibility = Visibility.Hidden;
+        }
     }
 }

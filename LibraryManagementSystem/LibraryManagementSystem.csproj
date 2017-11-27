@@ -54,7 +54,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\AddBookForm.xaml.cs">
+      <DependentUpon>AddBookForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddMemberForm.xaml.cs">
+      <DependentUpon>AddMemberForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageBookUC.xaml.cs">
+      <DependentUpon>ManageBookUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageMembersUC.xaml.cs">
+      <DependentUpon>ManageMembersUC.xaml</DependentUpon>
+    </Compile>
     <Page Include="LMSLoginMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddBookForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddMemberForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -73,6 +93,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ManageBookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManageMembersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

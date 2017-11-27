@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem"
+        xmlns:views="clr-namespace:LibraryManagementSystem.Views"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
         Title="Library Management System" MinHeight="550" MinWidth="850" Height="550" Width="850" MaxHeight="550" MaxWidth="850">
@@ -30,18 +31,21 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="31*" />
+                <RowDefinition Height="21*" />
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Vertical" Grid.Column="0">
-                <Button Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
-                <Button Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+                <Button x:Name="ManageMembersBtn" Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="Button_Click"/>
+                <Button Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="Button_Click_1"/>
+                <Button Content="Manage Fines" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
                 <Button Content="Manage Loans" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+                <Button Content="Tools" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
                 <Button Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
             </StackPanel>
-
-
+            <views:ManageMembersUC x:Name="ManageMembersUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
+            <views:ManageBookUC x:Name="ManageBooksUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
         </Grid>
+        
     </Grid>
 </Window>
