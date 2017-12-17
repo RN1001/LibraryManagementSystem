@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LibraryManagementSystem.Views
+namespace LibraryManagementSystem.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for ManageBookUC.xaml
+    /// Interaction logic for ToolsUC.xaml
     /// </summary>
-    public partial class ManageBookUC : UserControl
+    public partial class ToolsUC : UserControl
     {
-        public ManageBookUC()
+        public ToolsUC()
         {
             InitializeComponent();
-        }
-
-        private void AddBooksBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AddBookForm abf = new AddBookForm();
-            abf.Show();
         }
     }
 }

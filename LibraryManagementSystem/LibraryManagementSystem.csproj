@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -45,36 +47,38 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Views\AddBookForm.xaml.cs">
+    <Compile Include="Views\BookForms\AddBookForm.xaml.cs">
       <DependentUpon>AddBookForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AddMemberForm.xaml.cs">
+    <Compile Include="Views\MemberForms\AddMemberForm.xaml.cs">
       <DependentUpon>AddMemberForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ManageBookUC.xaml.cs">
-      <DependentUpon>ManageBookUC.xaml</DependentUpon>
+    <Compile Include="Views\UserControls\ManageBooksUC.xaml.cs">
+      <DependentUpon>ManageBooksUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ManageMembersUC.xaml.cs">
+    <Compile Include="Views\UserControls\ManageMembersUC.xaml.cs">
       <DependentUpon>ManageMembersUC.xaml</DependentUpon>
     </Compile>
     <Page Include="LMSLoginMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AddBookForm.xaml">
+    <Page Include="Views\BookForms\AddBookForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AddMemberForm.xaml">
+    <Page Include="Views\MemberForms\AddMemberForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,11 +97,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\ManageBookUC.xaml">
+    <Page Include="Views\UserControls\ManageBooksUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ManageMembersUC.xaml">
+    <Page Include="Views\UserControls\ManageMembersUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +135,8 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Views\FinesForms\" />
+    <Folder Include="Views\LoansForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

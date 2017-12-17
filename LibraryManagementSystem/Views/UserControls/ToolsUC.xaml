@@ -1,12 +1,12 @@
-﻿<UserControl x:Class="LibraryManagementSystem.Views.ManageBookUC"
+﻿<UserControl x:Class="LibraryManagementSystem.Views.UserControls.ToolsUC"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:LibraryManagementSystem.Views"
+             xmlns:local="clr-namespace:LibraryManagementSystem.Views.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="100">
     <Grid>
-        <Button x:Name="AddBooksBtn" Content="Add Book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Click="AddBooksBtn_Click"/>
+        <Button x:Name="ViewTool1" Content="View Tool" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100"/>
     </Grid>
 </UserControl>

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem"
         xmlns:views="clr-namespace:LibraryManagementSystem.Views"
+        xmlns:UC="clr-namespace:LibraryManagementSystem.Views.UserControls"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
         Title="Library Management System" MinHeight="550" MinWidth="850" Height="550" Width="850" MaxHeight="550" MaxWidth="850">
@@ -43,8 +44,10 @@
                 <Button Content="Tools" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
                 <Button Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
             </StackPanel>
-            <views:ManageMembersUC x:Name="ManageMembersUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
-            <views:ManageBookUC x:Name="ManageBooksUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
+            <UC:ManageMembersUC x:Name="ManageMembersUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
+            <UC:ManageBooksUC x:Name="ManageBooksUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
+            
+
         </Grid>
         
     </Grid>

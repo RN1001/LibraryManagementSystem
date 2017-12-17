@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LibraryManagementSystem.Views
+namespace LibraryManagementSystem.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for ManageMembersUC.xaml
+    /// Interaction logic for ManageLoansUC.xaml
     /// </summary>
-    public partial class ManageMembersUC : UserControl
+    public partial class ManageLoansUC : UserControl
     {
-        public ManageMembersUC()
+        public ManageLoansUC()
         {
             InitializeComponent();
-        }
-
-        private void AddMemberBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AddMemberForm adm = new AddMemberForm();
-            adm.Show();
         }
     }
 }
