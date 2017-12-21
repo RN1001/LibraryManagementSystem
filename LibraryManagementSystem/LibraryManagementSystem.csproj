@@ -34,7 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -58,6 +65,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\AuthorBook.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookSupplier.cs" />
+    <Compile Include="Models\Fines.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Library.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MemberType.cs" />
+    <Compile Include="Models\Publisher.cs" />
+    <Compile Include="Models\Renewals.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Shelf.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Views\BookForms\AddBookForm.xaml.cs">
       <DependentUpon>AddBookForm.xaml</DependentUpon>
     </Compile>
@@ -67,8 +89,20 @@
     <Compile Include="Views\UserControls\ManageBooksUC.xaml.cs">
       <DependentUpon>ManageBooksUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\ManageFinesUC.xaml.cs">
+      <DependentUpon>ManageFinesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ManageLoansUC.xaml.cs">
+      <DependentUpon>ManageLoansUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\ManageMembersUC.xaml.cs">
       <DependentUpon>ManageMembersUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ReportsUC.xaml.cs">
+      <DependentUpon>ReportsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ToolsUC.xaml.cs">
+      <DependentUpon>ToolsUC.xaml</DependentUpon>
     </Compile>
     <Page Include="LMSLoginMainView.xaml">
       <SubType>Designer</SubType>
@@ -101,7 +135,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\UserControls\ManageFinesUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\ManageLoansUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControls\ManageMembersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\ReportsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\ToolsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +174,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,10 +184,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\FinesForms\" />
     <Folder Include="Views\LoansForms\" />
+    <Folder Include="Views\ReportForms\" />
+    <Folder Include="Views\ToolForms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PlaceHolderImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

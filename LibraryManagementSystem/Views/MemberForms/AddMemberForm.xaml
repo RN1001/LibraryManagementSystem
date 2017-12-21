@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem.Views"
         mc:Ignorable="d"
-        Title="AddMemberForm" Height="300" Width="300">
+        Title="AddMemberForm" Height="500" Width="560">
     <Grid>
-        <Label Content="WOOOO"> </Label>
+        <Image HorizontalAlignment="Left" Height="182" Margin="332,5,0,0" VerticalAlignment="Top" Width="183" Source="/LibraryManagementSystem;component/Images/PlaceHolderImage.jpg"    />
+        <Button Content="Upload" HorizontalAlignment="Left" Margin="440,192,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Select image -&gt;" HorizontalAlignment="Left" Margin="332,187,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Member ID" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="15,46,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Middle Name" HorizontalAlignment="Left" Margin="15,88,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="15,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="DOB" HorizontalAlignment="Left" Margin="15,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.676,0.538"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="314,251,0,0" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="15,251,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Secondary Address" HorizontalAlignment="Left" Margin="15,288,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Post Code" HorizontalAlignment="Left" Margin="15,326,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,328,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="15,368,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,370,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="15,408,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <DatePicker HorizontalAlignment="Left" Margin="131,163,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="395,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Telephone" HorizontalAlignment="Left" Margin="314,288,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="395,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Mobile" HorizontalAlignment="Left" Margin="314,325,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="395,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Member Type" HorizontalAlignment="Left" Margin="310,364,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="395,368,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Student"></ComboBoxItem>
+            <ComboBoxItem Content="Teacher"></ComboBoxItem>
+            <ComboBoxItem Content="Standard"></ComboBoxItem>
+        </ComboBox>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="347,412,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="440,412,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>

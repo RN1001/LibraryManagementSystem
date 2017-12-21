@@ -8,7 +8,7 @@
         xmlns:UC="clr-namespace:LibraryManagementSystem.Views.UserControls"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
-        Title="Library Management System" MinHeight="550" MinWidth="850" Height="550" Width="850" MaxHeight="550" MaxWidth="850">
+        Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="950" MaxHeight="600" MaxWidth="950">
     <Grid>
         <!-- Main grid row and column defintions -->
         <Grid.ColumnDefinitions>
@@ -17,19 +17,21 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menu bar control -->
-        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="840" Grid.ColumnSpan="2" Margin="0,0,-8,0">
-            <MenuItem Header="File" Height="20" Width="37"/>
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="942" Grid.ColumnSpan="2">
+            <MenuItem Header="File" Height="20" Width="37">
+                <MenuItem Header="Close" HorizontalAlignment="Left" Height="20" Width="150" Margin="0,0,-7,0" Click="MenuItem_Click"/>
+            </MenuItem>
             <MenuItem Header="Options" Height="20" Width="61"/>
             <MenuItem Header="Help" Height="20" Width="44">
-                <MenuItem Header="Library Management System" Height="30" Margin="0,0,0,0"/>
-                <MenuItem Header="About Author" HorizontalAlignment="Left" Height="30" Width="239" Margin="0,0,-3,0"/>
+                <MenuItem Header="Library Management System" Height="25" Margin="0,0,0,0"/>
+                <MenuItem Header="About Author" HorizontalAlignment="Left" Height="25" Width="239" Margin="0,0,-3,0"/>
             </MenuItem>
         </Menu>
-        <Grid>
+        <Grid Margin="0,0,169,10">
             <!-- Secondary grid Row and Column Definitions -->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="86*" />
+                <ColumnDefinition Width="65*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="31*" />
@@ -37,18 +39,22 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Vertical" Grid.Column="0">
-                <Button x:Name="ManageMembersBtn" Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="Button_Click"/>
-                <Button Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="Button_Click_1"/>
-                <Button Content="Manage Fines" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
-                <Button Content="Manage Loans" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
-                <Button Content="Tools" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
-                <Button Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35"/>
+                <Button x:Name="ManageMembersBtn" Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageMembersBtn_Click"/>
+                <Button x:Name="ManageBooksBtn" Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageBooksBtn_Click"/>
+                <Button x:Name="ManageFinesBtn" Content="Manage Fines" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageFinesBtn_Click"/>
+                <Button x:Name="ManageLoansBtn" Content="Manage Loans" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageLoansBtn_Click"/>
+                <Button x:Name="ToolsBtn" Content="Tools" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ToolsBtn_Click"/>
+                <Button x:Name="ReportsBtn" Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ReportsBtn_Click"/>
             </StackPanel>
-            <UC:ManageMembersUC x:Name="ManageMembersUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
-            <UC:ManageBooksUC x:Name="ManageBooksUC" Grid.Column="1" Grid.Row="0" Margin="10,40,0,0" Visibility="Hidden"/>
-            
+
+            <UC:ManageMembersUC x:Name="ManageMembersUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
+            <UC:ManageBooksUC x:Name="ManageBooksUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
+            <UC:ManageFinesUC x:Name="ManageFinesUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
+            <UC:ManageLoansUC x:Name="ManageLoansUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
+            <UC:ToolsUC x:Name="ToolsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
+            <UC:ReportsUC x:Name="ReportsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
 
         </Grid>
-        
+
     </Grid>
 </Window>

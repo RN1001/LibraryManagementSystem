@@ -25,16 +25,69 @@ namespace LibraryManagementSystem
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ManageMembersBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Visible;
             ManageBooksUC.Visibility = Visibility.Hidden;
+            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageLoansUC.Visibility = Visibility.Hidden;
+            ToolsUC.Visibility = Visibility.Hidden;
+            ReportsUC.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ManageBooksBtn_Click(object sender, RoutedEventArgs e)
         {
-            ManageBooksUC.Visibility = Visibility.Visible;
             ManageMembersUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Visible;
+            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageLoansUC.Visibility = Visibility.Hidden;
+            ToolsUC.Visibility = Visibility.Hidden;
+            ReportsUC.Visibility = Visibility.Hidden;
+        }
+
+        private void ManageFinesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMembersUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;
+            ManageFinesUC.Visibility = Visibility.Visible;
+            ManageLoansUC.Visibility = Visibility.Hidden;
+            ToolsUC.Visibility = Visibility.Hidden;
+            ReportsUC.Visibility = Visibility.Hidden;
+        }
+
+        private void ManageLoansBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMembersUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;
+            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageLoansUC.Visibility = Visibility.Visible;
+            ToolsUC.Visibility = Visibility.Hidden;
+            ReportsUC.Visibility = Visibility.Hidden;
+        }
+
+        private void ToolsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMembersUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;
+            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageLoansUC.Visibility = Visibility.Hidden;
+            ToolsUC.Visibility = Visibility.Visible;
+            ReportsUC.Visibility = Visibility.Hidden;
+        }
+
+        private void ReportsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMembersUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;
+            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageLoansUC.Visibility = Visibility.Hidden;
+            ToolsUC.Visibility = Visibility.Hidden;
+            ReportsUC.Visibility = Visibility.Visible;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
