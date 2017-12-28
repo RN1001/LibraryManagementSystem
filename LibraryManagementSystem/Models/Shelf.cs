@@ -1,9 +1,34 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class Shelf
+    class Shelf : ObservableObject
     {
-        public int ShelfID { get; set; }
-        public int LibraryID { get; set; }
+        private int shelfID;
+
+        public int ShelfID
+        {
+            get { return shelfID; }
+            set
+            {
+                shelfID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int libraryID;
+
+        public int LibraryID
+        {
+            get { return libraryID; }
+            set
+            {
+                libraryID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }

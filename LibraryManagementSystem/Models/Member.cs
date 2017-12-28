@@ -3,25 +3,169 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibraryManagementSystem.Utility;
+
 
 namespace LibraryManagementSystem.Models
 {
-
-    class Member
+    class Member : ObservableObject
     {
-        public int MemberID { get; set; }
-        public string MemFirstname { get; set; }
-        public string MemMiddleName { get; set; }
-        public string MemLastname { get; set; }
-        public DateTime MemDOB { get; set; }
-        public string MemAddress { get; set; }
-        public string MemSecondAddress { get; set; }
-        public string MemPostCode { get; set; }
-        public string MemEmail { get; set; }
-        public int MemTelephone { get; set; }
-        public int MemMobile { get; set; }
+        
+        private int memberID;
 
-        public int MemberTypeID { get; set; }
-        public string MemberTypeName { get; set; }
+        public int MemberID
+        {
+            get { return memberID; }
+            set
+            {
+                memberID = value;
+                NotifyPropertyChanged();    
+            }
+        }
+
+        private string memFirstName;
+
+        public string MemFirstName
+        {
+            get { return memFirstName; }
+            set
+            {
+                memFirstName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memMiddleName;
+
+        public string MemMiddleName
+        {
+            get { return memMiddleName; }
+            set
+            {
+                memMiddleName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memLastName;
+
+        public string MemLastName
+        {
+            get { return memLastName; }
+            set
+            {
+                memLastName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private MySql.Data.Types.MySqlDateTime memDOB;
+
+        public MySql.Data.Types.MySqlDateTime MemDOB
+        {
+            get { return memDOB; }
+            set
+            {
+                memDOB = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memAddress;
+
+        public string MemAddress
+        {
+            get { return memAddress; }
+            set
+            {
+                memAddress = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memSecAddress;
+
+        public string MemSecAddress
+        {
+            get { return memSecAddress; }
+            set
+            {
+                memSecAddress = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memPostCode;
+
+        public string MemPostCode
+        {
+            get { return memPostCode; }
+            set
+            {
+                memPostCode = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memCity;
+
+        public string MemCity
+        {
+            get { return memCity; }
+            set
+            {
+                memCity = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memEmail;
+
+        public string MemEmail
+        {
+            get { return memEmail; }
+            set
+            {
+                memEmail = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memTelephone;
+
+        public string MemTelephone
+        {
+            get { return memTelephone; }
+            set
+            {
+                memTelephone = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memMobile;
+
+        public string MemMobile
+        {
+            get { return memMobile; }
+            set
+            {
+                memMobile = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string memType;
+
+        public string MemType
+        {
+            get { return memType; }
+            set
+            {
+                memType = value;
+                NotifyPropertyChanged();
+            }
+        }
+       
     }
 }

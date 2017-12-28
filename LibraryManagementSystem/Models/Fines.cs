@@ -1,9 +1,34 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class Fines
+    class Fines : ObservableObject
     {
-        public int FinesID { get; set; }
-        public float FineCost { get; set; }
+       private int finesID;
+
+        public int FinesID
+        {
+            get { return finesID; }
+            set
+            {
+                finesID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private float fineCost;
+
+        public float FineCost
+        {
+            get { return fineCost; }
+            set
+            {
+                fineCost = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }

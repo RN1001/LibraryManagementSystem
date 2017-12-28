@@ -1,16 +1,86 @@
 ﻿using System;
+using LibraryManagementSystem.Utility;
+using MySql.Data.Types;
 
 namespace LibraryManagementSystem.Models
 {
-    class Loan
+    class Loan : ObservableObject
     {
-        public int LoanID { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        private int loanId;
 
-        public int CopyID { get; set; }
-        public int MemberID { get; set; }
-        public int FinesID { get; set; }
+        public int LoandID
+        {
+            get { return loanID; }
+            set
+            {
+                loanID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private MySqlDateTime startDate;
+
+        public MySqlDateTime StartDate
+        {
+            get { return startDate; }
+            set
+            {
+                startDate = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private MySqlDateTime endDate;
+
+        public MySqlDateTime EndDate
+        {
+            get { return endDate; }
+            set
+            {
+                endDate = value;
+                NotifyPropertyChanged();
+            }
+
+        }
+
+        private int copyID;
+
+        public int CopyID
+        {
+            get { return copyID; }
+            set
+            {
+                copyID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int memberID;
+
+        public int MemberID
+        {
+            get { return memberID; }
+            set
+            {
+                memberID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
+        private int fineId;
+
+        public int FineID
+        {
+            get { return fineId; }
+            set
+            {
+                fineId = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }

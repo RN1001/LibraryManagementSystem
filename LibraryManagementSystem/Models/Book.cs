@@ -1,15 +1,83 @@
-﻿namespace LibraryManagementSystem.Models
-{
-    class Book
-    {
-        public int BookISBN { get; set; }
-        public string BookTitle { get; set; }
-        public int BookPages { get; set; }
-        public int BookEdition { get; set; }
-        public float BookCost { get; set; }
+﻿using LibraryManagementSystem.Utility;
 
-        public int GenreID { get; set; }
-        public int PublisherID { get; set; }
+namespace LibraryManagementSystem.Models
+{
+    class Book : ObservableObject
+    {
+              
+        private int bookISBN;
+
+        public int BookISBN
+        {
+            get { return bookISBN; }
+            set
+            {
+                bookISBN = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int bookPages;
+
+        public int BookPages
+        {
+            get { return bookPages; }
+            set
+            {
+                bookPages = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int bookEdition;
+
+        public int BookEdition
+        {
+            get { return bookEdition; }
+            set
+            {
+                bookEdition = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private float bookCost;
+
+        public float BookCost
+        {
+            get { return bookCost; }
+            set
+            {
+                bookCost = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int genreID;
+
+        public int GenreID
+        {
+            get { return genreID; }
+            set
+            {
+                genreID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int publisherID;
+
+        public int PublisherID
+        {
+            get { return publisherID; }
+            set
+            {
+                publisherID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }

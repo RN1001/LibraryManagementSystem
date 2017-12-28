@@ -40,10 +40,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.5\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.5\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,6 +94,9 @@
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Shelf.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Utility\DBManager.cs" />
+    <Compile Include="Utility\ObservableObject.cs" />
+    <Compile Include="ViewModels\ManageMemberViewModel.cs" />
     <Compile Include="Views\BookForms\AddBookForm.xaml.cs">
       <DependentUpon>AddBookForm.xaml</DependentUpon>
     </Compile>
@@ -184,7 +201,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\FinesForms\" />
     <Folder Include="Views\LoansForms\" />
     <Folder Include="Views\ReportForms\" />
@@ -192,6 +208,39 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PlaceHolderImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlTransaction.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlParameterCollection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlParameter.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlHelper.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlException.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlDataReader.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlDataAdapter.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlConnectionStringBuilder.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlConnection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlCommandBuilder.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docs\MySqlCommand.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

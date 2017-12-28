@@ -1,9 +1,35 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class Genre
+    class Genre : ObservableObject
     {
-        public int GenreID { get; set; }
-        public string GenreName { get; set; }
+        
+        private int genreID;
+
+        public int GenreID
+        {
+            get { return genreID; }
+            set
+            {
+                genreID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string genreName;
+
+        public string GenreName
+        {
+            get { return genreName; }
+            set
+            {
+                genreName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }

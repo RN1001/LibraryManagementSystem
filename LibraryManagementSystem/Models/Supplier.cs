@@ -1,15 +1,82 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class Supplier
+    class Supplier : ObservableObject
     {
-        public int SupplierID { get; set; }
-        public string SupplierName { get; set; }
-        public string SupplierAddress { get; set; }
-        public string SupplierCity { get; set; }
-        public string SupplierPostcode { get; set; }
-        public string SupplierEmail { get; set; }
-        public int SupplierTelephone { get; set; }
-        public int SupplierMobile { get; set; }
+       
+        private int supplierID;
+
+        public int SupplierID
+        {
+            get { return supplierID; }
+            set
+            {
+                supplierID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string supplierName;
+
+        public string SupplierName
+        {
+            get { return supplierName; }
+            set
+            {
+                supplierName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string supplierAddress;
+
+        public string SupplierAddress
+        {
+            get { return supplierAddress; }
+            set
+            {
+                supplierAddress = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string supplierPostCode;
+
+        public string SupplierPostCode
+        {
+            get { return supplierPostCode; }
+            set
+            {
+                supplierPostCode = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string supplierEmail;
+
+        public string SupplierEmail
+        {
+            get { return supplierEmail; }
+            set
+            {
+                supplierEmail = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string supplierTelephone;
+
+        public string SupplierTelephone
+        {
+            get { return supplierTelephone; }
+            set
+            {
+                supplierTelephone = value;
+                NotifyPropertyChanged();
+            }
+        }
+                
     }
 
 }

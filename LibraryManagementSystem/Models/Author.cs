@@ -1,11 +1,59 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class Author
+    class Author :ObservableObject
     {
-        public int AuthorID { get; set; }
-        public string AFirstname { get; set; }
-        public string AMiddleName { get; set; }
-        public string ALastName { get; set; }
+        private int authorID;
+
+        public int AuthorID
+        {
+            get { return authorID; }
+            set
+            {
+                authorID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string authorFirstname;
+
+        public string AuthorFirstname
+        {
+            get { return authorFirstname; }
+            set
+            {
+                authorFirstname = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string authorMiddlename;
+
+        public string AuthorMiddleName
+        {
+            get { return authorMiddlename; }
+            set
+            {
+                authorMiddlename = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string authorLastname;
+
+        public string AuthorLastname
+        {
+            get { return authorLastname; }
+            set
+            {
+                authorLastname = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
+
     }
 
 }

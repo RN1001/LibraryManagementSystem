@@ -1,12 +1,70 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class Library
+    class Library : ObservableObject
     {
-        public int LibraryID { get; set; }
-        public string LibraryName { get; set; }
-        public string LibraryAddress { get; set; }
-        public string LibraryPostcode { get; set; }
-        public int LibraryTelephone { get; set; }
+        private int libraryID;
+
+        public int LibraryID
+        {
+            get { return libraryID; }
+            set
+            {
+                libraryID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string libraryName;
+
+        public string LibraryName
+        {
+            get { return libraryName; }
+            set
+            {
+                libraryName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string libraryAddress;
+
+        public string LibraryAddress
+        {
+            get { return libraryAddress; }
+            set
+            {
+                libraryAddress = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string libPostCode;
+
+        public string LibPostCode
+        {
+            get { return libPostCode; }
+            set
+            {
+                libPostCode = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private string libTelephone;
+
+        public string LibTelephone
+        {
+            get { return libTelephone; }
+            set
+            {
+                libTelephone = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }

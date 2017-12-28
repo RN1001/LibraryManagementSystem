@@ -1,9 +1,36 @@
-﻿namespace LibraryManagementSystem.Models
+﻿using LibraryManagementSystem.Utility;
+
+namespace LibraryManagementSystem.Models
 {
-    class AuthorBook
+    class AuthorBook : ObservableObject
     {
-        public int AuthorID { get; set; }
-        public int BookISBN { get; set; }
+        
+
+        private int authorID;
+
+        public int AuthorID
+        {
+            get { return authorID; }
+            set
+            {
+                authorID = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int bookISBN;
+
+        public int BookISBN
+        {
+            get { return bookISBN; }
+            set
+            {
+                bookISBN = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
     }
 
 }
