@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:LibraryManagementSystem"
         xmlns:views="clr-namespace:LibraryManagementSystem.Views"
         xmlns:UC="clr-namespace:LibraryManagementSystem.Views.UserControls"
+        xmlns:MemUC="clr-namespace:LibraryManagementSystem.Views.UserControls.MemberUCs"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
         Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="950" MaxHeight="600" MaxWidth="950">
@@ -41,8 +42,8 @@
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <Button x:Name="ManageMembersBtn" Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageMembersBtn_Click"/>
                 <Button x:Name="ManageBooksBtn" Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageBooksBtn_Click"/>
-                <Button x:Name="ManageFinesBtn" Content="Manage Fines" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageFinesBtn_Click"/>
                 <Button x:Name="ManageLoansBtn" Content="Manage Loans" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageLoansBtn_Click"/>
+                <Button x:Name="ManageFinesBtn" Content="Manage Fines" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageFinesBtn_Click"/>
                 <Button x:Name="ToolsBtn" Content="Tools" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ToolsBtn_Click"/>
                 <Button x:Name="ReportsBtn" Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ReportsBtn_Click"/>
             </StackPanel>
@@ -55,6 +56,7 @@
             <UC:ReportsUC x:Name="ReportsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
 
         </Grid>
+       
 
     </Grid>
 </Window>

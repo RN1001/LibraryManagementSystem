@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem.Views.BookForms"
         mc:Ignorable="d"
-        Title="UpdateBookForm" Height="300" Width="300">
+        Title="UpdateBookForm" Height="440" Width="590">
     <Grid>
+        <Label Content="Book ID" HorizontalAlignment="Left" Margin="17,49,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="281,51,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Please enter a Book ID, this form will auto-complete." HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+                
+        <Label Content="Book Title" HorizontalAlignment="Left" Margin="17,107,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Book Pages" HorizontalAlignment="Left" Margin="17,147,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Book Edition" HorizontalAlignment="Left" Margin="17,190,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Book Cost" HorizontalAlignment="Left" Margin="17,234,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+
+        <!-- Genre could be combo box -->
         
+
+        <Label Content="Publisher Name" HorizontalAlignment="Left" Margin="17,279,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="119,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Publisher City" HorizontalAlignment="Left" Margin="17,320,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="119,323,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Published Year" HorizontalAlignment="Left" Margin="17,363,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="119,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+
+        <Label Content="Author Firstname" HorizontalAlignment="Left" Margin="293,110,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Author Middlename" HorizontalAlignment="Left" Margin="293,150,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Author Lastname" HorizontalAlignment="Left" Margin="293,193,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="351,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.643,0.846"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Copy Amount" HorizontalAlignment="Left" Margin="310,282,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        
+        <Button Content="Update" HorizontalAlignment="Left" Margin="374,367,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="474,367,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Book ID" HorizontalAlignment="Left" Margin="17,49,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="281,51,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Please enter a Book ID, this form will auto-complete." HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+
     </Grid>
 </Window>

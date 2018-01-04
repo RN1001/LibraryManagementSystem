@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem.Views.MemberForms"
         mc:Ignorable="d"
-        Title="DeleteMemberForm" Height="300" Width="200">
+        Title="DeleteMemberForm" Height="310" Width="400">
     <Grid>
         <Label Content="Please enter a Member ID below" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="167" FontSize="10"/>
-        <Label Content="This form will auto complete" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="27" Width="167" FontSize="9"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="17,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="First name" HorizontalAlignment="Left" Margin="17,88,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="17,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="17,149,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="17,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="14,226,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="102,226,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="This form will auto complete" HorizontalAlignment="Left" Margin="0,253,0,0" VerticalAlignment="Top" Height="27" Width="167" FontSize="9"/>
+        <TextBox x:Name="MemIDTbox" HorizontalAlignment="Left" Height="23" Margin="17,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Label Content="First name" HorizontalAlignment="Left" Margin="18,91,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fnameTbox" HorizontalAlignment="Left" Height="23" Margin="18,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="18,152,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="lnameTbox" HorizontalAlignment="Left" Height="23" Margin="18,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Button x:Name="DeleteMemberBtn" Content="Delete" HorizontalAlignment="Left" Margin="210,246,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="CancelFormBtn" Content="Cancel" HorizontalAlignment="Left" Margin="298,246,0,0" VerticalAlignment="Top" Width="75" Click="CancelFormBtn_Click"/>
+        <Button x:Name="SearchID" Content="Search ID" HorizontalAlignment="Left" Margin="182,51,0,0" VerticalAlignment="Top" Width="75" Click="SearchID_Click"/>
+        <Label Content="Middle name" HorizontalAlignment="Left" Margin="225,91,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="mnameTbox" HorizontalAlignment="Left" Height="23" Margin="225,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="225,152,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AddressTbox" HorizontalAlignment="Left" Height="23" Margin="225,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
 
 
     </Grid>

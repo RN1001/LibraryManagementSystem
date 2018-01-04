@@ -83,25 +83,39 @@
     <Compile Include="Models\AuthorBook.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookSupplier.cs" />
+    <Compile Include="Models\Copy.cs" />
     <Compile Include="Models\Fines.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Library.cs" />
     <Compile Include="Models\Loan.cs" />
     <Compile Include="Models\Member.cs" />
-    <Compile Include="Models\MemberType.cs" />
     <Compile Include="Models\Publisher.cs" />
     <Compile Include="Models\Renewals.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Shelf.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Utility\DBManager.cs" />
+    <Compile Include="Utility\Log.cs" />
     <Compile Include="Utility\ObservableObject.cs" />
+    <Compile Include="ViewModels\ManageBookViewModel.cs" />
     <Compile Include="ViewModels\ManageMemberViewModel.cs" />
     <Compile Include="Views\BookForms\AddBookForm.xaml.cs">
       <DependentUpon>AddBookForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BookForms\DeleteBookForm.xaml.cs">
+      <DependentUpon>DeleteBookForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookForms\UpdateBookForm.xaml.cs">
+      <DependentUpon>UpdateBookForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MemberForms\AddMemberForm.xaml.cs">
       <DependentUpon>AddMemberForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MemberForms\DeleteMemberForm.xaml.cs">
+      <DependentUpon>DeleteMemberForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MemberForms\UpdateMemberForm.xaml.cs">
+      <DependentUpon>UpdateMemberForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\ManageBooksUC.xaml.cs">
       <DependentUpon>ManageBooksUC.xaml</DependentUpon>
@@ -115,6 +129,9 @@
     <Compile Include="Views\UserControls\ManageMembersUC.xaml.cs">
       <DependentUpon>ManageMembersUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\MemberUCs\AddMemberUC.xaml.cs">
+      <DependentUpon>AddMemberUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\ReportsUC.xaml.cs">
       <DependentUpon>ReportsUC.xaml</DependentUpon>
     </Compile>
@@ -126,6 +143,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BookForms\AddBookForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookForms\DeleteBookForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookForms\UpdateBookForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,6 +173,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\MemberForms\DeleteMemberForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MemberForms\UpdateMemberForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControls\ManageBooksUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\ManageMembersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\MemberUCs\AddMemberUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -205,6 +242,7 @@
     <Folder Include="Views\LoansForms\" />
     <Folder Include="Views\ReportForms\" />
     <Folder Include="Views\ToolForms\" />
+    <Folder Include="Views\UserControls\BookUCs\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PlaceHolderImage.jpg" />

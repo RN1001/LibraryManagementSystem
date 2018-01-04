@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibraryManagementSystem.ViewModels;
 
 namespace LibraryManagementSystem.Views.MemberForms
 {
@@ -22,6 +23,34 @@ namespace LibraryManagementSystem.Views.MemberForms
         public DeleteMemberForm()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMemberViewModel manageMemberViewModel = new ManageMemberViewModel();
+            
+            try
+            {
+                manageMemberViewModel.DeleteMemberQuery(MemIDTbox);
+            }
+            catch (Exception)
+            {
+                System.Windows.Forms.MessageBox.Show("Error Occurred");
+            }
+
+            Close();
+        }
+
+        private void SearchID_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMemberViewModel manageMemberViewModel = new ManageMemberViewModel();
+
+            manageMemberViewModel.SearchMemByID(MemIDTbox, fnameTbox, lnameTbox, mnameTbox, AddressTbox);
+        }
+
+        private void CancelFormBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

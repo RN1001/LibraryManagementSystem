@@ -18,9 +18,8 @@
         <Label Content="Select image -&gt;" HorizontalAlignment="Left" Margin="332,187,0,0" VerticalAlignment="Top"/>
          
         <!-- data entry controls -->
-        <Label Content="Member ID" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="IDTbox" HorizontalAlignment="Left" Height="23" Margin="131,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        
+        <Label Content="Please enter the member details in the correct fields." HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top"/>
+
         <Label Content="First Name" HorizontalAlignment="Left" Margin="15,46,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="fNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>    
         

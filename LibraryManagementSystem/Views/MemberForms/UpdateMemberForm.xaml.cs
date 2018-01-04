@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibraryManagementSystem.ViewModels;
 
 namespace LibraryManagementSystem.Views.MemberForms
 {
@@ -22,6 +23,28 @@ namespace LibraryManagementSystem.Views.MemberForms
         public UpdateMemberForm()
         {
             InitializeComponent();
+        }
+
+        private void SearchIDButton_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMemberViewModel manageMemberViewModel = new ManageMemberViewModel();
+                      
+            manageMemberViewModel.SearchMemByID(MemIDTbox, fNameTbox, MNameTbox, LNameTbox, DOBDPick, PrimAddTbox, SecAddTbox, PostCodeTbox, CityTbox, EmailTbox, TelTbox, MobTbox, MemTypeCBox);
+           
+        }
+
+        private void UpdateMemberBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMemberViewModel manageMemberViewModel = new ManageMemberViewModel();
+
+            manageMemberViewModel.UpdateMemberQuery(MemIDTbox, fNameTbox, MNameTbox, LNameTbox, DOBDPick, PrimAddTbox, SecAddTbox, PostCodeTbox, CityTbox, EmailTbox, TelTbox, MobTbox, MemTypeCBox);
+
+            Close();
+        }
+
+        private void CancelFormBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

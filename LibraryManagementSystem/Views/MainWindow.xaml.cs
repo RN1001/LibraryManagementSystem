@@ -87,7 +87,7 @@ namespace LibraryManagementSystem
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

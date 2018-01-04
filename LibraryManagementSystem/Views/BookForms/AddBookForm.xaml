@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem.Views"
         mc:Ignorable="d"
-        Title="AddBookForm" Height="210" Width="910">
+        Title="AddBookForm" Height="350" Width="570">
     <Grid>
         <Label Content="Book Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="101,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
@@ -15,25 +15,33 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="101,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Book Cost" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="101,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                
+        <Label Content="Publisher Name" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Publisher City" HorizontalAlignment="Left" Margin="10,223,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Published Year" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        
+        <Label Content="Author Firstname" HorizontalAlignment="Left" Margin="274,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Author Middlename" HorizontalAlignment="Left" Margin="274,50,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Author Lastname" HorizontalAlignment="Left" Margin="274,93,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="332,137,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Copy Amount" HorizontalAlignment="Left" Margin="291,185,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+       
+        
+        <Button Content="Add" HorizontalAlignment="Left" Margin="367,270,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="467,270,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        
+        <Label Content="Copy Amount" HorizontalAlignment="Left" Margin="291,185,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
 
-        <!-- Genre could be combo box -->
-        <Label Content="Author Firstname" HorizontalAlignment="Left" Margin="311,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="426,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Author Middlename" HorizontalAlignment="Left" Margin="311,50,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="426,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Author Lastname" HorizontalAlignment="Left" Margin="311,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="426,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Genre" HorizontalAlignment="Left" Margin="311,134,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="426,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
 
-        <Label Content="Publisher Name" HorizontalAlignment="Left" Margin="619,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="729,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Publisher City" HorizontalAlignment="Left" Margin="619,50,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="729,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Published Year" HorizontalAlignment="Left" Margin="619,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="729,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="707,141,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="807,141,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

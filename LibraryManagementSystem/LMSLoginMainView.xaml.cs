@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibraryManagementSystem.Utility;
 
 namespace LibraryManagementSystem
 {
@@ -45,11 +46,17 @@ namespace LibraryManagementSystem
                 UsernameTbx.Clear();
                 PasswordTbx.Clear();
                 ErrorLabel.Content = "Error occured, please try again.";
+
+                Log log = new Log();
+                log.ErrorMsg("Error occurred whilst user trying to log into application,\n Username and password may have been entered incorrectly.");
             }
 
             
         }
 
-         
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

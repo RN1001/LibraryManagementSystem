@@ -6,9 +6,9 @@ namespace LibraryManagementSystem.Models
 {
     class Loan : ObservableObject
     {
-        private int loanId;
+        private int loanID;
 
-        public int LoandID
+        public int LoanID
         {
             get { return loanID; }
             set

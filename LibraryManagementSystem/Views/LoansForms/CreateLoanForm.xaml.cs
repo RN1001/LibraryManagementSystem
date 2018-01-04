@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace LibraryManagementSystem.Views
+namespace LibraryManagementSystem.Views.LoansForms
 {
     /// <summary>
-    /// Interaction logic for AddBookForm.xaml
+    /// Interaction logic for CreateLoanForm.xaml
     /// </summary>
-    public partial class AddBookForm : Window
+    public partial class CreateLoanForm : Window
     {
-        public AddBookForm()
+        public CreateLoanForm()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
     }
 }

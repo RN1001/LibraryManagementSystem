@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LibraryManagementSystem.Views.MemberForms;
 
 namespace LibraryManagementSystem.Views.UserControls
 {
@@ -28,7 +29,19 @@ namespace LibraryManagementSystem.Views.UserControls
         private void AddMemberBtn_Click(object sender, RoutedEventArgs e)
         {
             AddMemberForm addMemberForm = new AddMemberForm();
-            addMemberForm.Show();
+            addMemberForm.Show();             
+        }
+
+        private void DeleteMemberBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteMemberForm deleteMemberForm = new DeleteMemberForm();
+            deleteMemberForm.Show();
+        }
+
+        private void UpdateMemberBtn_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateMemberForm updateMemberForm = new UpdateMemberForm();
+            updateMemberForm.Show();
         }
     }
 }

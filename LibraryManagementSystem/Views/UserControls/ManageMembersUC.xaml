@@ -8,7 +8,7 @@
             d:DesignHeight="150" d:DesignWidth="100">
     <Grid>
         <Button x:Name="AddMemberBtn" Content="Add Member" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Click="AddMemberBtn_Click"/>
-        <Button x:Name="UpdateMemberBtn" Content="Update Member" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" Width="100" Height="25"/>
-        <Button x:Name="DeleteMemberBtn" Content="Delete Member" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Width="100" Height="25"/>
+        <Button x:Name="UpdateMemberBtn" Content="Update Member" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" Width="100" Height="25" Click="UpdateMemberBtn_Click"/>
+        <Button x:Name="DeleteMemberBtn" Content="Delete Member" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Width="100" Height="25" Click="DeleteMemberBtn_Click"/>
     </Grid>
 </UserControl>
