@@ -108,6 +108,9 @@
     <Compile Include="Views\BookForms\UpdateBookForm.xaml.cs">
       <DependentUpon>UpdateBookForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoansForms\CreateLoanForm.xaml.cs">
+      <DependentUpon>CreateLoanForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MemberForms\AddMemberForm.xaml.cs">
       <DependentUpon>AddMemberForm.xaml</DependentUpon>
     </Compile>
@@ -129,9 +132,6 @@
     <Compile Include="Views\UserControls\ManageMembersUC.xaml.cs">
       <DependentUpon>ManageMembersUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\MemberUCs\AddMemberUC.xaml.cs">
-      <DependentUpon>AddMemberUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\UserControls\ReportsUC.xaml.cs">
       <DependentUpon>ReportsUC.xaml</DependentUpon>
     </Compile>
@@ -151,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BookForms\UpdateBookForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoansForms\CreateLoanForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,10 +201,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UserControls\MemberUCs\AddMemberUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\UserControls\ReportsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -239,10 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\FinesForms\" />
-    <Folder Include="Views\LoansForms\" />
     <Folder Include="Views\ReportForms\" />
     <Folder Include="Views\ToolForms\" />
-    <Folder Include="Views\UserControls\BookUCs\" />
+    <Folder Include="Views\UserControls\MemberUCs\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PlaceHolderImage.jpg" />

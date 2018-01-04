@@ -8,34 +8,34 @@
         Title="AddBookForm" Height="350" Width="570">
     <Grid>
         <Label Content="Book Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="101,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="BookTitleTbox" HorizontalAlignment="Left" Height="23" Margin="101,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Book Pages" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="101,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="BookPagesTbox" HorizontalAlignment="Left" Height="23" Margin="101,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Book Edition" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="101,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="BookEdiTbox" HorizontalAlignment="Left" Height="23" Margin="101,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Book Cost" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="101,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="BookCostTbox" HorizontalAlignment="Left" Height="23" Margin="101,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
                 
         <Label Content="Publisher Name" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="PubNameTbox" HorizontalAlignment="Left" Height="23" Margin="112,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Publisher City" HorizontalAlignment="Left" Margin="10,223,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="PubCityTbox" HorizontalAlignment="Left" Height="23" Margin="112,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Published Year" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="PubYearTbox" HorizontalAlignment="Left" Height="23" Margin="112,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         
         <Label Content="Author Firstname" HorizontalAlignment="Left" Margin="274,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="fnameTbox" HorizontalAlignment="Left" Height="23" Margin="389,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Author Middlename" HorizontalAlignment="Left" Margin="274,50,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="mnameTbox" HorizontalAlignment="Left" Height="23" Margin="389,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Author Lastname" HorizontalAlignment="Left" Margin="274,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="lnameTbox" HorizontalAlignment="Left" Height="23" Margin="389,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="332,137,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="genreTbox" HorizontalAlignment="Left" Height="23" Margin="389,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <Label Content="Copy Amount" HorizontalAlignment="Left" Margin="291,185,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="389,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="amountTbox" HorizontalAlignment="Left" Height="23" Margin="389,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
        
         
-        <Button Content="Add" HorizontalAlignment="Left" Margin="367,270,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="367,270,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="467,270,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         
         <Label Content="Copy Amount" HorizontalAlignment="Left" Margin="291,185,0,0" VerticalAlignment="Top"/>

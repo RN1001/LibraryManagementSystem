@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:LibraryManagementSystem"
         xmlns:views="clr-namespace:LibraryManagementSystem.Views"
         xmlns:UC="clr-namespace:LibraryManagementSystem.Views.UserControls"
-        xmlns:MemUC="clr-namespace:LibraryManagementSystem.Views.UserControls.MemberUCs"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
         Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="950" MaxHeight="600" MaxWidth="950">

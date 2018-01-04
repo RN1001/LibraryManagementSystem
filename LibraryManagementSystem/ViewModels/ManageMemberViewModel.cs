@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LibraryManagementSystem.Models;
 using LibraryManagementSystem.Utility;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using MySql.Data.MySqlClient;
-using LibraryManagementSystem.Views;
 using System.Windows.Controls;
 
 namespace LibraryManagementSystem.ViewModels
