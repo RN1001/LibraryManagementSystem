@@ -8,7 +8,7 @@
         xmlns:UC="clr-namespace:LibraryManagementSystem.Views.UserControls"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
-        Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="950" MaxHeight="600" MaxWidth="950">
+        Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="1300" MaxHeight="600" MaxWidth="1300">
     <Grid>
         <!-- Main grid row and column defintions -->
         <Grid.ColumnDefinitions>
@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menu bar control -->
-        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="942" Grid.ColumnSpan="2">
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1300" Grid.ColumnSpan="2">
             <MenuItem Header="File" Height="20" Width="37">
                 <MenuItem Header="Close" HorizontalAlignment="Left" Height="20" Width="150" Margin="0,0,-7,0" Click="MenuItem_Click"/>
             </MenuItem>
@@ -27,7 +27,7 @@
                 <MenuItem Header="About Author" HorizontalAlignment="Left" Height="25" Width="239" Margin="0,0,-3,0"/>
             </MenuItem>
         </Menu>
-        <Grid Margin="0,0,169,10">
+        <Grid Margin="0,0,319,10">
             <!-- Secondary grid Row and Column Definitions -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="86*" />
@@ -54,8 +54,45 @@
             <UC:ToolsUC x:Name="ToolsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
             <UC:ReportsUC x:Name="ReportsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
 
+            <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
+                <Button x:Name="LoadMemBtn" Content="Load Members" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="LoadMemBtn_Click"/>
+                <Button x:Name="LoadBookBtn" Content="Load Books" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="LoadBookBtn_Click"/>
+                <Button x:Name="LoadLoanBtn" Content="Load Loans" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="LoadLoanBtn_Click"/>
+                <Button x:Name="LoadFineBtn" Content="Load Fines" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="Button_Click"/>
+                <Label Content="Load Data into datagrid" Margin="10,0,0,0" FontSize="14"/>
+            </StackPanel>
+
         </Grid>
-       
+        <TabControl HorizontalAlignment="Left" Height="523" Margin="332,27,-101,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2">
+            <TabItem Header="Members">
+                <DataGrid x:Name="MemberDataGrid" Height="500" Margin="-4,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" ItemsSource="{Binding }"/>
+            </TabItem>
+            <TabItem Header="Books">
+                <DataGrid x:Name="BookDataGrid" HorizontalAlignment="Left" Height="500" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}"/>
+            </TabItem>
+            <TabItem Header="Loans">
+                <DataGrid x:Name="LoanDataGrid" HorizontalAlignment="Left" Height="500" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Loan ID"/>
+                        <DataGridTextColumn Header="Start date"/>
+                        <DataGridTextColumn Header="End date"/>
+                        <DataGridTextColumn Header="First name"/>
+                        <DataGridTextColumn Header="Last name"/>
+                        <DataGridTextColumn Header="Copy of book"/>
+                        <DataGridTextColumn Header="Title"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Fines">
+                <DataGrid x:Name="FineDataGrid" HorizontalAlignment="Left" Height="500" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="649" Grid.ColumnSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Fine ID"/>
+                        <DataGridTextColumn Header="Cost"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+
 
     </Grid>
 </Window>

@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LibraryManagementSystem.ViewModels;
+using MySql.Data.MySqlClient;
+using System.Data;
+using LibraryManagementSystem.Utility;
 
 namespace LibraryManagementSystem
 {
@@ -88,6 +92,29 @@ namespace LibraryManagementSystem
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void LoadMemBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageMemberViewModel manageMemberViewModel = new ManageMemberViewModel();
+            manageMemberViewModel.FillDatagridWithMembers(MemberDataGrid);
+               
+        }
+
+        private void LoadBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageBookViewModel manageBookViewModel = new ManageBookViewModel();
+            manageBookViewModel.FillDgBookrecords(BookDataGrid);
+        }
+
+        private void LoadLoanBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

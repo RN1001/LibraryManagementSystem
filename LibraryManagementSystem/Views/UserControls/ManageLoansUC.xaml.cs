@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LibraryManagementSystem.Views.LoansForms;
+
 
 namespace LibraryManagementSystem.Views.UserControls
 {
@@ -23,6 +25,17 @@ namespace LibraryManagementSystem.Views.UserControls
         public ManageLoansUC()
         {
             InitializeComponent();
+        }
+
+        private void ViewLoans_Click(object sender, RoutedEventArgs e)
+        {
+            CreateLoanForm createLoanForm = new CreateLoanForm();
+            createLoanForm.Show();
+        }
+
+        private void Returnbtn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Feature has not been implement yet.", "Not implemented..", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
         }
     }
 }

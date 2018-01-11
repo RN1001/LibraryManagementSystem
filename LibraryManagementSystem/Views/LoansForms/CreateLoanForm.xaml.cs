@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibraryManagementSystem.ViewModels;
 
 namespace LibraryManagementSystem.Views.LoansForms
 {
@@ -22,6 +23,25 @@ namespace LibraryManagementSystem.Views.LoansForms
         public CreateLoanForm()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ManageLoansViewModel manageLoansViewModel = new ManageLoansViewModel();
+            manageLoansViewModel.SearchMemID(MemIdTbox, MemfnameTbox, MemLnameTbox);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ManageLoansViewModel manageLoansViewModel = new ManageLoansViewModel();
+            manageLoansViewModel.SearchCopyID(CopyIdTbox, BookTitleTbox, BookISBNTbox);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ManageLoansViewModel manageLoansViewModel = new ManageLoansViewModel();
+            manageLoansViewModel.InsertLoan(MemIdTbox, CopyIdTbox, fineinc, stdate, enddate);
+            this.Close();
         }
     }
 }

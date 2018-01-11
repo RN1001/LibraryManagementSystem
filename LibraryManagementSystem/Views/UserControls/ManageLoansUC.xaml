@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
             d:DesignHeight="150" d:DesignWidth="100">
     <Grid>
-        <Button x:Name="ViewLoans" Content="View Loans" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25"/>
-        
+        <Button x:Name="ViewLoans" Content="Create Loan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Click="ViewLoans_Click"/>
+        <Button x:Name="Returnbtn" Content="Confirm Return" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="0,40,0,0" Click="Returnbtn_Click"/>
     </Grid>
 </UserControl>

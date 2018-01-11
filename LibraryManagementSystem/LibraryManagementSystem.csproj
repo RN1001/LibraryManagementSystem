@@ -98,6 +98,7 @@
     <Compile Include="Utility\Log.cs" />
     <Compile Include="Utility\ObservableObject.cs" />
     <Compile Include="ViewModels\ManageBookViewModel.cs" />
+    <Compile Include="ViewModels\ManageLoansViewModel.cs" />
     <Compile Include="ViewModels\ManageMemberViewModel.cs" />
     <Compile Include="Views\BookForms\AddBookForm.xaml.cs">
       <DependentUpon>AddBookForm.xaml</DependentUpon>

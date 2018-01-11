@@ -7,6 +7,7 @@ using LibraryManagementSystem.Utility;
 using System.Windows.Controls;
 using MySql.Data.MySqlClient;
 using System.Windows;
+using System.Data;
 
 namespace LibraryManagementSystem.ViewModels
 {
@@ -113,6 +114,35 @@ namespace LibraryManagementSystem.ViewModels
 
             db.Conn.Close();
         }
+
+        public void FillDgBookrecords(DataGrid grid)
+        {
+            DBManager db = new DBManager();
+
+            try
+            {
+                db.Conn.Open();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            string getBookData = "SELECT Book.Lib_BookISBN AS isbn, Lib_BookTitle AS title, Lib_Bookpages AS Pages, Lib_BookEdition AS Edition, Lib_AuthorFirstname AS firstname, Lib_AuthorLastname AS lastname, Lib_PublisherName AS Publisher, Lib_PublishedYear AS year, Lib_GenreName AS genre, Lib_CopyAmount AS amount FROM book, author, publisher, genre, copy";
+
+            db.cmd = new MySqlCommand(getBookData, db.Conn);
+
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(db.cmd);
+
+            DataTable records = new DataTable();
+
+            dataAdapter.Fill(records);
+
+            grid.DataContext = records;
+
+            db.Conn.Close();
+        }
+
 
     }
 }

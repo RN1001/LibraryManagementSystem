@@ -3,6 +3,8 @@ using LibraryManagementSystem.Models;
 using LibraryManagementSystem.Utility;
 using MySql.Data.MySqlClient;
 using System.Windows.Controls;
+using System.Data;
+using System.Collections.Generic;
 
 namespace LibraryManagementSystem.ViewModels
 {
@@ -311,6 +313,36 @@ namespace LibraryManagementSystem.ViewModels
             db.Conn.Close();
             
         }
+
+        public void FillDatagridWithMembers(DataGrid grid)
+        {
+            DBManager db = new DBManager();
+
+            try
+            {
+                db.Conn.Open();
+            }
+            catch (Exception)
+            {
+                throw;                
+            }
+
+            string GetMemberData = "SELECT Lib_MemberID AS ID, Lib_MemberFirstname AS Firstname, Lib_MemberMiddleName AS Middlename, Lib_MemberLastname AS Lastname, Lib_MemberDOB AS DOB, Lib_MemberAddress AS Address, Lib_MemberPostCode AS Post_Code, Lib_MemberCity AS City, Lib_MemberEmailAddress AS Email, Lib_MemberTelephone AS Telephone, Lib_MemberMobile AS Mobile, Lib_MemberTypeName AS Member_type FROM member";
+
+            db.cmd = new MySqlCommand(GetMemberData, db.Conn);
+
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(db.cmd);
+
+            DataTable records = new DataTable();
+            dataAdapter.Fill(records);
+                        
+            grid.DataContext = records;
+
+            db.Conn.Close();
+        }
+
+
+
         #endregion
     }
 }
