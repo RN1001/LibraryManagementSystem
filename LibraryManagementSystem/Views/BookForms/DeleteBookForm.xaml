@@ -4,17 +4,74 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem.Views.BookForms"
+        xmlns:uc="clr-namespace:LibraryManagementSystem.Views.UserControls"
         mc:Ignorable="d"
-        Title="DeleteBookForm" Height="300" Width="200">
+        Title="Delete Book Related Data" Height="560" Width="700">
     <Grid>
-        <Label Content="Please enter a Book ID below" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="167"/>
-        <Label Content="This form will auto complete" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="27" Width="167" FontSize="9"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="17,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="Title" HorizontalAlignment="Left" Margin="17,88,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="17,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="ISBN" HorizontalAlignment="Left" Margin="17,149,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="17,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="14,226,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="102,226,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <GroupBox Header="Delete Book" HorizontalAlignment="Left" Height="200" Margin="10,41,0,0" VerticalAlignment="Top" Width="300">
+            <GroupBox.Content>
+                <Grid>
+                    <uc:SearchIDUC Margin="34,18,0,113"/>
+                    <Label Content="Title" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Edition" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="68,148,0,0" VerticalAlignment="Top" Width="120"/>
+
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+
+        <GroupBox Header="Delete publisher" HorizontalAlignment="Left" Height="200" Margin="10,250,0,0" VerticalAlignment="Top" Width="300">
+            <GroupBox.Content>
+                <Grid>
+                    <uc:SearchIDUC Margin="31,17,10,114"/>
+                    <Label Content="Name" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Year" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="68,148,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+
+        <GroupBox Header="Delete Author" HorizontalAlignment="Left" Height="200" Margin="350,41,0,0" VerticalAlignment="Top" Width="316">
+            <GroupBox.Content>
+                <Grid>
+                    <uc:SearchIDUC Margin="30,13,25,118"/>
+                    <Label Content="Firstname" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Lastname" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="68,148,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+
+        <GroupBox Header="Delete Genre" HorizontalAlignment="Left" Height="118" Margin="350,250,0,0" VerticalAlignment="Top" Width="307">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="Genre" HorizontalAlignment="Left" Margin="24,66,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="71,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="196,69,0,0" VerticalAlignment="Top" Width="75"/>
+                    <uc:SearchIDUC HorizontalAlignment="Left" Height="47" Margin="34,10,0,0" VerticalAlignment="Top" Width="261"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+
+        <GroupBox Header="Delete Copy" HorizontalAlignment="Left" Height="117" Margin="350,373,0,0" VerticalAlignment="Top" Width="307">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="Amount" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="68,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="193,68,0,0" VerticalAlignment="Top" Width="75"/>
+                    <uc:SearchIDUC HorizontalAlignment="Left" Height="58" Margin="31,14,-14,0" VerticalAlignment="Top" Width="278"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+        <Label Content="Please enter an ID in the related fields, these textboxes will be auto-completed" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="531,504,0,0" VerticalAlignment="Top" Width="126"/>
+
     </Grid>
 </Window>

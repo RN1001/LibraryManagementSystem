@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LibraryManagementSystem.Views.BookForms;
 
 namespace LibraryManagementSystem.Views.UserControls
 {
@@ -29,6 +30,18 @@ namespace LibraryManagementSystem.Views.UserControls
         {
             AddBookForm addBookForm = new AddBookForm();
             addBookForm.Show();
+        }
+
+        private void UpdateBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateBookForm updateBookform = new UpdateBookForm();
+            updateBookform.Show();
+        }
+
+        private void DeleteBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteBookForm deletebookform = new DeleteBookForm();
+            deletebookform.Show();
         }
     }
 }

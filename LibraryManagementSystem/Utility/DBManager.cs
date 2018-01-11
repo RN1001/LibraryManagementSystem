@@ -12,7 +12,7 @@ namespace LibraryManagementSystem.Utility
         private string Server = "localhost";
         private string Database = "newlibrarydb";
         private string Username ="root";
-        private string Password = "root";
+        private string Password = "";
 
         public MySqlConnection Conn;
         public MySqlCommand cmd;

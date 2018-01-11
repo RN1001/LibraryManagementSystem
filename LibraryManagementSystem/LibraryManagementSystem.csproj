@@ -136,6 +136,9 @@
     <Compile Include="Views\UserControls\ReportsUC.xaml.cs">
       <DependentUpon>ReportsUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\SearchIDUC.xaml.cs">
+      <DependentUpon>SearchIDUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\ToolsUC.xaml.cs">
       <DependentUpon>ToolsUC.xaml</DependentUpon>
     </Compile>
@@ -203,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\ReportsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\SearchIDUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

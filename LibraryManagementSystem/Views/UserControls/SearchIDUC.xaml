@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="LibraryManagementSystem.Views.UserControls.SearchIDUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LibraryManagementSystem.Views.UserControls"
+             mc:Ignorable="d" Height="47.155" Width="254.471">
+    <Grid>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="37,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="162,13,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+    </Grid>
+</UserControl>

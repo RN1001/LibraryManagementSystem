@@ -5,49 +5,97 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementSystem.Views.BookForms"
         mc:Ignorable="d"
-        Title="UpdateBookForm" Height="440" Width="590">
+        Title="Update Book Data Form" Height="570" Width="850">
     <Grid>
-        <Label Content="Book ID" HorizontalAlignment="Left" Margin="17,49,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="281,51,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Please enter a Book ID, this form will auto-complete." HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="14"/>
-                
-        <Label Content="Book Title" HorizontalAlignment="Left" Margin="17,107,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Book Pages" HorizontalAlignment="Left" Margin="17,147,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Book Edition" HorizontalAlignment="Left" Margin="17,190,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Book Cost" HorizontalAlignment="Left" Margin="17,234,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Please enter an ID for each group, this form will auto-complete fields." HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <!-- book section -->
+        <GroupBox Header="Book details" HorizontalAlignment="Left" Height="210" Margin="15,44,0,0" VerticalAlignment="Top" Width="378">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="Book ID" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="90,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Search" HorizontalAlignment="Left" Margin="263,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Label Content="Book Title" HorizontalAlignment="Left" Margin="5,50,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="90,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Book Pages" HorizontalAlignment="Left" Margin="4,81,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="90,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Book Edition" HorizontalAlignment="Left" Margin="4,112,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="92,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Book Cost" HorizontalAlignment="Left" Margin="4,143,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="90,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Update" HorizontalAlignment="Left" Margin="263,50,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+        <!-- publisher section -->
+        <GroupBox Header="Publisher details" HorizontalAlignment="Left" Height="210" Margin="17,268,0,0" VerticalAlignment="Top" Width="376">
+            <GroupBox.Content>
+                <Grid Margin="0,10,0,-10">
+                    <Label Content="Publisher ID" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="99,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Publisher Name" HorizontalAlignment="Left" Margin="0,40,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="99,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Publisher City" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="99,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Published Year" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="99,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Update" HorizontalAlignment="Left" Margin="264,42,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Search" HorizontalAlignment="Left" Margin="264,3,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
 
-        <!-- Genre could be combo box -->
+        <!--Author section -->
+        <GroupBox Header="Author details" HorizontalAlignment="Left" Height="210" Margin="420,44,0,0" VerticalAlignment="Top" Width="398">
+            <GroupBox.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="181*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Author Firstname" HorizontalAlignment="Left" Margin="2,51,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Author Lastname" HorizontalAlignment="Left" Margin="2,128,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Author Middlename" HorizontalAlignment="Left" Margin="0,91,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Author ID" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Search" HorizontalAlignment="Left" Margin="297,13,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Update" HorizontalAlignment="Left" Margin="297,54,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+        <!-- Genre section -->
+        <GroupBox Header="Genre details" HorizontalAlignment="Left" Height="98" Margin="420,268,0,0" VerticalAlignment="Top" Width="398">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="Genre ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.643,0.846"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="72,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Genre" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="72,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Search" HorizontalAlignment="Left" Margin="291,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Update" HorizontalAlignment="Left" Margin="291,46,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+        <!-- Copy section -->
+        <GroupBox Header="Copy of details" HorizontalAlignment="Left" Height="96" Margin="420,382,0,0" VerticalAlignment="Top" Width="398">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="Copy ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="110,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Label Content="Copy Amount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,38,0,0"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Search" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Update" HorizontalAlignment="Left" Margin="293,41,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="720,504,0,0" VerticalAlignment="Top" Width="75"/>
         
 
-        <Label Content="Publisher Name" HorizontalAlignment="Left" Margin="17,279,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="119,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Publisher City" HorizontalAlignment="Left" Margin="17,320,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="119,323,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Published Year" HorizontalAlignment="Left" Margin="17,363,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="119,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
 
-        <Label Content="Author Firstname" HorizontalAlignment="Left" Margin="293,110,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Author Middlename" HorizontalAlignment="Left" Margin="293,150,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Author Lastname" HorizontalAlignment="Left" Margin="293,193,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Genre" HorizontalAlignment="Left" Margin="351,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.643,0.846"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Copy Amount" HorizontalAlignment="Left" Margin="310,282,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        
-        <Button Content="Update" HorizontalAlignment="Left" Margin="374,367,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="474,367,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Book ID" HorizontalAlignment="Left" Margin="17,49,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="281,51,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Please enter a Book ID, this form will auto-complete." HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>
