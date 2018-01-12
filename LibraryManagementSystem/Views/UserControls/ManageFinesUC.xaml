@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
             d:DesignHeight="150" d:DesignWidth="100">
     <Grid>
-        <Button x:Name="ViewFines" Content="View Fines" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" />
+        <Button x:Name="ViewFines" Content="Manage Fines" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" />
         
     </Grid>
 </UserControl>

@@ -37,7 +37,8 @@
                 <RowDefinition Height="31*" />
                 <RowDefinition Height="21*" />
             </Grid.RowDefinitions>
-
+            
+            <!-- stack panel list of buttons that call usercontrols -->
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <Button x:Name="ManageMembersBtn" Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageMembersBtn_Click"/>
                 <Button x:Name="ManageBooksBtn" Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageBooksBtn_Click"/>
@@ -54,6 +55,7 @@
             <UC:ToolsUC x:Name="ToolsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
             <UC:ReportsUC x:Name="ReportsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
 
+            <!-- stack panel that calls buttons to load sql data into datagrid -->
             <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
                 <Button x:Name="LoadMemBtn" Content="Load Members" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="LoadMemBtn_Click"/>
                 <Button x:Name="LoadBookBtn" Content="Load Books" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="LoadBookBtn_Click"/>
@@ -61,30 +63,20 @@
                 <Button x:Name="LoadFineBtn" Content="Load Fines" HorizontalAlignment="Left" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="151" Height="35" Click="Button_Click"/>
                 <Label Content="Load Data into datagrid" Margin="10,0,0,0" FontSize="14"/>
             </StackPanel>
-
         </Grid>
-        <TabControl HorizontalAlignment="Left" Height="523" Margin="332,27,-101,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2">
+        <!-- Tabcontrol with several datagrids contained within -->
+        <TabControl HorizontalAlignment="Left" Height="340" Margin="332,27,-101,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2">
             <TabItem Header="Members">
-                <DataGrid x:Name="MemberDataGrid" Height="500" Margin="-4,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" ItemsSource="{Binding }"/>
+                <DataGrid x:Name="MemberDataGrid" Height="310" Margin="-4,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" ItemsSource="{Binding }" ToolTip="Click Load members to populate this grid"/>
             </TabItem>
             <TabItem Header="Books">
-                <DataGrid x:Name="BookDataGrid" HorizontalAlignment="Left" Height="500" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}"/>
+                <DataGrid x:Name="BookDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Books' to populate this grid"/>
             </TabItem>
             <TabItem Header="Loans">
-                <DataGrid x:Name="LoanDataGrid" HorizontalAlignment="Left" Height="500" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Loan ID"/>
-                        <DataGridTextColumn Header="Start date"/>
-                        <DataGridTextColumn Header="End date"/>
-                        <DataGridTextColumn Header="First name"/>
-                        <DataGridTextColumn Header="Last name"/>
-                        <DataGridTextColumn Header="Copy of book"/>
-                        <DataGridTextColumn Header="Title"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <DataGrid x:Name="LoanDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Loans' to populate this grid"/>
             </TabItem>
             <TabItem Header="Fines">
-                <DataGrid x:Name="FineDataGrid" HorizontalAlignment="Left" Height="500" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="649" Grid.ColumnSpan="2">
+                <DataGrid x:Name="FineDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Fines' to populate this grid">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Fine ID"/>
                         <DataGridTextColumn Header="Cost"/>
@@ -92,7 +84,15 @@
                 </DataGrid>
             </TabItem>
         </TabControl>
-
-
+        <Label Content="Query Builder" HorizontalAlignment="Left" Margin="332,390,0,0" VerticalAlignment="Top"/>
+        <RichTextBox HorizontalAlignment="Left" Height="113" Margin="332,421,0,0" VerticalAlignment="Top" Width="784" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <!-- executes queries from query builder rich text box-->
+        <Button x:Name="ExecuteQueryBtn" Content="Execute query" Grid.Column="1" HorizontalAlignment="Left" Margin="493,509,0,0" VerticalAlignment="Top" Width="99" Click="ExecuteQueryBtn_Click"/>
     </Grid>
 </Window>

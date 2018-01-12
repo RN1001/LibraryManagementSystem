@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LibraryManagementSystem.Views.BookForms"
         xmlns:uc="clr-namespace:LibraryManagementSystem.Views.UserControls"
         mc:Ignorable="d"
-        Title="Delete Book Related Data" Height="560" Width="700">
+        Title="Delete Book Related Data" Height="570" Width="700">
     <Grid>
 
         <GroupBox Header="Delete Book" HorizontalAlignment="Left" Height="200" Margin="10,41,0,0" VerticalAlignment="Top" Width="300">

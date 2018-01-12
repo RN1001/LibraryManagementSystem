@@ -8,14 +8,27 @@ using System.Collections.Generic;
 
 namespace LibraryManagementSystem.ViewModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="LibraryManagementSystem.Utility.ObservableObject" />
     class ManageMemberViewModel : ObservableObject
     {
         #region Model Wrapper Properties
 
         // region could move to another class for reading or updating data.
 
+        /// <summary>
+        /// The member
+        /// </summary>
         Member member = new Member();
 
+        /// <summary>
+        /// Gets or sets the firstname.
+        /// </summary>
+        /// <value>
+        /// The firstname.
+        /// </value>
         public string Firstname
         {
             get { return member.MemFirstName; }
@@ -25,6 +38,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the name of the middle.
+        /// </summary>
+        /// <value>
+        /// The name of the middle.
+        /// </value>
         public string MiddleName
         {
             get => member.MemMiddleName;
@@ -35,6 +54,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the last name.
+        /// </summary>
+        /// <value>
+        /// The last name.
+        /// </value>
         public string LastName
         {   
             get => member.MemLastName;
@@ -45,6 +70,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the dob.
+        /// </summary>
+        /// <value>
+        /// The dob.
+        /// </value>
         public MySql.Data.Types.MySqlDateTime DOB
         {
             get => member.MemDOB;
@@ -55,6 +86,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the prim address.
+        /// </summary>
+        /// <value>
+        /// The prim address.
+        /// </value>
         public string PrimAddress
         {
             get => member.MemAddress;
@@ -65,6 +102,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the sec address.
+        /// </summary>
+        /// <value>
+        /// The sec address.
+        /// </value>
         public string SecAddress
         {
             get => member.MemSecAddress;
@@ -75,6 +118,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the post code.
+        /// </summary>
+        /// <value>
+        /// The post code.
+        /// </value>
         public string PostCode
         {
             get => member.MemPostCode;
@@ -85,6 +134,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the city.
+        /// </summary>
+        /// <value>
+        /// The city.
+        /// </value>
         public string City
         {
             get => member.MemCity;
@@ -95,6 +150,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the email.
+        /// </summary>
+        /// <value>
+        /// The email.
+        /// </value>
         public string Email
         {
             get => member.MemEmail;
@@ -105,6 +166,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the telephone.
+        /// </summary>
+        /// <value>
+        /// The telephone.
+        /// </value>
         public string Telephone
         {
             get => member.MemTelephone;
@@ -115,6 +182,12 @@ namespace LibraryManagementSystem.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the mobile.
+        /// </summary>
+        /// <value>
+        /// The mobile.
+        /// </value>
         public string Mobile
         {
             get => member.MemMobile;
@@ -126,10 +199,25 @@ namespace LibraryManagementSystem.ViewModels
         }
 
         #endregion
-                
+
 
         #region Queries
 
+        /// <summary>
+        /// Inserts the member query.
+        /// </summary>
+        /// <param name="Fname">The fname.</param>
+        /// <param name="Mname">The mname.</param>
+        /// <param name="Lname">The lname.</param>
+        /// <param name="Dob">The dob.</param>
+        /// <param name="PrimAdd">The prim add.</param>
+        /// <param name="SecAdd">The sec add.</param>
+        /// <param name="PostCode">The post code.</param>
+        /// <param name="City">The city.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Telephone">The telephone.</param>
+        /// <param name="Mob">The mob.</param>
+        /// <param name="MemType">Type of the memory.</param>
         public void InsertMemberQuery(TextBox Fname, TextBox Mname, TextBox Lname, DatePicker Dob, TextBox PrimAdd, TextBox SecAdd, TextBox PostCode, TextBox City, TextBox Email, TextBox Telephone, TextBox Mob, ComboBox MemType)
         {
             DBManager db = new DBManager();
@@ -164,7 +252,23 @@ namespace LibraryManagementSystem.ViewModels
             db.Conn.Close();
         }
 
-        
+
+        /// <summary>
+        /// Searches the memory by identifier.
+        /// </summary>
+        /// <param name="MemID">The memory identifier.</param>
+        /// <param name="Fname">The fname.</param>
+        /// <param name="Mname">The mname.</param>
+        /// <param name="Lname">The lname.</param>
+        /// <param name="Dob">The dob.</param>
+        /// <param name="PrimAdd">The prim add.</param>
+        /// <param name="SecAdd">The sec add.</param>
+        /// <param name="PostCode">The post code.</param>
+        /// <param name="City">The city.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Telephone">The telephone.</param>
+        /// <param name="Mob">The mob.</param>
+        /// <param name="MemType">Type of the memory.</param>
         public void SearchMemByID(TextBox MemID, TextBox Fname, TextBox Mname, TextBox Lname, DatePicker Dob, TextBox PrimAdd, TextBox SecAdd, TextBox PostCode, TextBox City, TextBox Email, TextBox Telephone, TextBox Mob, ComboBox MemType)
         {
             DBManager db = new DBManager();
@@ -212,6 +316,14 @@ namespace LibraryManagementSystem.ViewModels
         }
 
 
+        /// <summary>
+        /// Searches the memory by identifier.
+        /// </summary>
+        /// <param name="MemID">The memory identifier.</param>
+        /// <param name="fname">The fname.</param>
+        /// <param name="lname">The lname.</param>
+        /// <param name="mname">The mname.</param>
+        /// <param name="address">The address.</param>
         public void SearchMemByID(TextBox MemID, TextBox fname, TextBox lname, TextBox mname, TextBox address)
         {
             DBManager db = new DBManager();
@@ -251,6 +363,22 @@ namespace LibraryManagementSystem.ViewModels
         }
 
 
+        /// <summary>
+        /// Updates the member query.
+        /// </summary>
+        /// <param name="MemID">The memory identifier.</param>
+        /// <param name="Fname">The fname.</param>
+        /// <param name="Mname">The mname.</param>
+        /// <param name="Lname">The lname.</param>
+        /// <param name="Dob">The dob.</param>
+        /// <param name="PrimAdd">The prim add.</param>
+        /// <param name="SecAdd">The sec add.</param>
+        /// <param name="PostCode">The post code.</param>
+        /// <param name="City">The city.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Telephone">The telephone.</param>
+        /// <param name="Mob">The mob.</param>
+        /// <param name="MemType">Type of the memory.</param>
         public void UpdateMemberQuery(TextBox MemID, TextBox Fname, TextBox Mname, TextBox Lname, DatePicker Dob, TextBox PrimAdd, TextBox SecAdd, TextBox PostCode, TextBox City, TextBox Email, TextBox Telephone, TextBox Mob, ComboBox MemType)
         {
             DBManager db = new DBManager();
@@ -290,6 +418,10 @@ namespace LibraryManagementSystem.ViewModels
             db.Conn.Close();
         }
 
+        /// <summary>
+        /// Deletes the member query.
+        /// </summary>
+        /// <param name="MemberID">The member identifier.</param>
         public void DeleteMemberQuery(TextBox MemberID)
         {
             DBManager db = new DBManager();
@@ -314,6 +446,10 @@ namespace LibraryManagementSystem.ViewModels
             
         }
 
+        /// <summary>
+        /// Fills the datagrid with members.
+        /// </summary>
+        /// <param name="grid">The grid.</param>
         public void FillDatagridWithMembers(DataGrid grid)
         {
             DBManager db = new DBManager();
