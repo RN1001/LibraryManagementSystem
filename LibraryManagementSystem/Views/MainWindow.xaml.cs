@@ -40,8 +40,7 @@ namespace LibraryManagementSystem
         private void ManageMembersBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Visible;
-            ManageBooksUC.Visibility = Visibility.Hidden;
-            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;            
             ManageLoansUC.Visibility = Visibility.Hidden;
             ToolsUC.Visibility = Visibility.Hidden;
             ReportsUC.Visibility = Visibility.Hidden;
@@ -55,8 +54,7 @@ namespace LibraryManagementSystem
         private void ManageBooksBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Hidden;
-            ManageBooksUC.Visibility = Visibility.Visible;
-            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Visible;            
             ManageLoansUC.Visibility = Visibility.Hidden;
             ToolsUC.Visibility = Visibility.Hidden;
             ReportsUC.Visibility = Visibility.Hidden;
@@ -70,8 +68,7 @@ namespace LibraryManagementSystem
         private void ManageFinesBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Hidden;
-            ManageBooksUC.Visibility = Visibility.Hidden;
-            ManageFinesUC.Visibility = Visibility.Visible;
+            ManageBooksUC.Visibility = Visibility.Hidden;          
             ManageLoansUC.Visibility = Visibility.Hidden;
             ToolsUC.Visibility = Visibility.Hidden;
             ReportsUC.Visibility = Visibility.Hidden;
@@ -85,8 +82,7 @@ namespace LibraryManagementSystem
         private void ManageLoansBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Hidden;
-            ManageBooksUC.Visibility = Visibility.Hidden;
-            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;            
             ManageLoansUC.Visibility = Visibility.Visible;
             ToolsUC.Visibility = Visibility.Hidden;
             ReportsUC.Visibility = Visibility.Hidden;
@@ -100,8 +96,7 @@ namespace LibraryManagementSystem
         private void ToolsBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Hidden;
-            ManageBooksUC.Visibility = Visibility.Hidden;
-            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;            
             ManageLoansUC.Visibility = Visibility.Hidden;
             ToolsUC.Visibility = Visibility.Visible;
             ReportsUC.Visibility = Visibility.Hidden;
@@ -115,8 +110,7 @@ namespace LibraryManagementSystem
         private void ReportsBtn_Click(object sender, RoutedEventArgs e)
         {
             ManageMembersUC.Visibility = Visibility.Hidden;
-            ManageBooksUC.Visibility = Visibility.Hidden;
-            ManageFinesUC.Visibility = Visibility.Hidden;
+            ManageBooksUC.Visibility = Visibility.Hidden;          
             ManageLoansUC.Visibility = Visibility.Hidden;
             ToolsUC.Visibility = Visibility.Hidden;
             ReportsUC.Visibility = Visibility.Visible;

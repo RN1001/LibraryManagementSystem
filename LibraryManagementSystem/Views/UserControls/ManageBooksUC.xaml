@@ -5,10 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LibraryManagementSystem.Views.UserControls"
              mc:Ignorable="d" 
-            d:DesignHeight="150" d:DesignWidth="100">
+            d:DesignHeight="300" d:DesignWidth="100">
     <Grid>
         <Button x:Name="AddBooksBtn" Content="Add Book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Click="AddBooksBtn_Click"/>
         <Button x:Name="UpdateBookBtn" Content="Update Book" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0" Width="100" Height="25" Click="UpdateBookBtn_Click"/>
         <Button x:Name="DeleteBookBtn" Content="Delete Book" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Width="100" Height="25" Click="DeleteBookBtn_Click"/>
+        <Button x:Name="AddBookSupplier" Content="Add Supplier" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,120,0,0" Width="100" Height="25" Click="AddBookSupplier_Click"/>
+        <Button x:Name="UpdateBookSupplier" Content="Update Supplier" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,160,0,0" Width="100" Height="25" Click="UpdateBookSupplier_Click"/>
+        <Button x:Name="DeleteBookSupplier" Content="Delete Supplier" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,200,0,0" Width="100" Height="25" Click="DeleteBookSupplier_Click"/>
+        <Button x:Name="BookLocation" Content="Book Location" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,240,0,0" Width="100" Height="25" Click="BookLocation_Click"/>
+
     </Grid>
 </UserControl>

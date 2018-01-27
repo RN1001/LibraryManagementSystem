@@ -9,5 +9,7 @@
     <Grid>
         <Button x:Name="ViewLoans" Content="Create Loan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Click="ViewLoans_Click"/>
         <Button x:Name="Returnbtn" Content="Confirm Return" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="0,40,0,0" Click="Returnbtn_Click"/>
+        <Button x:Name="Renewalsbtn" Content="Reserve Book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="0,80,0,0" Click="Renewalsbtn_Click"/>
+        <Button x:Name="Finesbtn" Content="Manage Fines" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="0,120,0,0" Click="Finesbtn_Click"/>
     </Grid>
 </UserControl>

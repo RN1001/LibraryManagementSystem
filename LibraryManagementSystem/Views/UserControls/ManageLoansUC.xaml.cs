@@ -37,5 +37,15 @@ namespace LibraryManagementSystem.Views.UserControls
         {
             System.Windows.Forms.MessageBox.Show("Feature has not been implement yet.", "Not implemented..", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
         }
+
+        private void Renewalsbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Finesbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -93,7 +93,7 @@ namespace LibraryManagementSystem.ViewModels
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The member ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                    System.Windows.Forms.MessageBox.Show("The Book Copy ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
                 }
 
                 db.Conn.Close();
@@ -119,7 +119,7 @@ namespace LibraryManagementSystem.ViewModels
             }
             catch (Exception)
             {
-                System.Windows.Forms.MessageBox.Show("The member ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                System.Windows.Forms.MessageBox.Show("Some form fields were not entered correctly, please resolve them before creating a loan.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
             }
 
             db.cmd = new MySqlCommand("InsertLoansp", db.Conn);

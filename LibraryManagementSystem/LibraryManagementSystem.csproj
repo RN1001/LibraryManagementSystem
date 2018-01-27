@@ -112,6 +112,9 @@
     <Compile Include="Views\LoansForms\CreateLoanForm.xaml.cs">
       <DependentUpon>CreateLoanForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoansForms\CreateReservationForm.xaml.cs">
+      <DependentUpon>CreateReservationForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MemberForms\AddMemberForm.xaml.cs">
       <DependentUpon>AddMemberForm.xaml</DependentUpon>
     </Compile>
@@ -123,9 +126,6 @@
     </Compile>
     <Compile Include="Views\UserControls\ManageBooksUC.xaml.cs">
       <DependentUpon>ManageBooksUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserControls\ManageFinesUC.xaml.cs">
-      <DependentUpon>ManageFinesUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\ManageLoansUC.xaml.cs">
       <DependentUpon>ManageLoansUC.xaml</DependentUpon>
@@ -162,6 +162,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LoansForms\CreateReservationForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MemberForms\AddMemberForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,10 +194,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\ManageBooksUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\UserControls\ManageFinesUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

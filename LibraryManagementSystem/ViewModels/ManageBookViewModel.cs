@@ -184,7 +184,7 @@ namespace LibraryManagementSystem.ViewModels
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The member ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                    System.Windows.Forms.MessageBox.Show("The Book Copy ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
                 }
 
                 db.Conn.Close();
@@ -290,7 +290,7 @@ namespace LibraryManagementSystem.ViewModels
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The  ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                    System.Windows.Forms.MessageBox.Show("The Publisher ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
                 }
 
                 db.Conn.Close();
@@ -395,7 +395,7 @@ namespace LibraryManagementSystem.ViewModels
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                    System.Windows.Forms.MessageBox.Show("The Author ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
                 }
 
                 db.Conn.Close();
@@ -493,7 +493,7 @@ namespace LibraryManagementSystem.ViewModels
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                    System.Windows.Forms.MessageBox.Show("The Genre ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
                 }
 
                 db.Conn.Close();
@@ -590,7 +590,7 @@ namespace LibraryManagementSystem.ViewModels
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
+                    System.Windows.Forms.MessageBox.Show("The Book Copy ID was incorrect, please make sure that the ID is a number.", "Data retrival error", System.Windows.Forms.MessageBoxButtons.OK);
                 }
 
                 db.Conn.Close();

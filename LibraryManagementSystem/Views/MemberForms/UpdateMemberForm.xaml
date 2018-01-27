@@ -13,37 +13,59 @@
         <Label Content="Enter ID" HorizontalAlignment="Left" Margin="12,51,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="MemIDTbox" HorizontalAlignment="Left" Height="23" Margin="76,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-        <!-- Fields for input -->
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="15,113,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="fNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Middle Name" HorizontalAlignment="Left" Margin="15,155,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="MNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="15,192,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="LNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="DOB" HorizontalAlignment="Left" Margin="15,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.676,0.538"/>
-        <DatePicker x:Name="DOBDPick" HorizontalAlignment="Left" Margin="131,230,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="15,304,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="PrimAddTbox" HorizontalAlignment="Left" Height="23" Margin="131,304,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Secondary Address" HorizontalAlignment="Left" Margin="15,341,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="SecAddTbox" HorizontalAlignment="Left" Height="23" Margin="131,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Post Code" HorizontalAlignment="Left" Margin="15,379,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="PostCodeTbox" HorizontalAlignment="Left" Height="23" Margin="131,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="City" HorizontalAlignment="Left" Margin="15,421,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="CityTbox" HorizontalAlignment="Left" Height="23" Margin="131,423,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="320,115,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="EmailTbox" HorizontalAlignment="Left" Height="23" Margin="401,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Telephone" HorizontalAlignment="Left" Margin="320,152,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TelTbox" HorizontalAlignment="Left" Height="23" Margin="401,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Mobile" HorizontalAlignment="Left" Margin="320,189,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="MobTbox" HorizontalAlignment="Left" Height="23" Margin="401,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Member Type" HorizontalAlignment="Left" Margin="316,228,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="MemTypeCBox" HorizontalAlignment="Left" Margin="401,232,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="Student"/>
-            <ComboBoxItem Content="Teacher"/>
-            <ComboBoxItem Content="Standard"/>
-        </ComboBox>
+        <GroupBox Header="Member Details" HorizontalAlignment="Left" Height="218" Margin="15,80,0,0" VerticalAlignment="Top" Width="527">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="First Name" HorizontalAlignment="Left" Margin="15,28,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="fNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="Middle Name" HorizontalAlignment="Left" Margin="15,70,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="MNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="Last Name" HorizontalAlignment="Left" Margin="15,112,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="LNameTbox" HorizontalAlignment="Left" Height="23" Margin="131,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="DOB" HorizontalAlignment="Left" Margin="15,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.676,0.538"/>
+                    <DatePicker x:Name="DOBDPick" HorizontalAlignment="Left" Margin="131,160,0,0" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="Email" HorizontalAlignment="Left" Margin="323,25,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="EmailTbox" HorizontalAlignment="Left" Height="23" Margin="385,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="Telephone" HorizontalAlignment="Left" Margin="295,70,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TelTbox" HorizontalAlignment="Left" Height="23" Margin="385,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="Mobile" HorizontalAlignment="Left" Margin="323,115,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="MobTbox" HorizontalAlignment="Left" Height="23" Margin="385,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <Label Content="Type" HorizontalAlignment="Left" Margin="335,158,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="MemTypeCBox" HorizontalAlignment="Left" Margin="385,158,0,0" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem Content="Student"></ComboBoxItem>
+                        <ComboBoxItem Content="Teacher"></ComboBoxItem>
+                        <ComboBoxItem Content="Standard"></ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
+        <GroupBox Header="Address" HorizontalAlignment="Left" Height="121" Margin="15,300,0,0" VerticalAlignment="Top" Width="527">
+            <GroupBox.Content>
+                <Grid>
+                    <Label Content="Address" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="PrimAddTbox" HorizontalAlignment="Left" Height="23" Margin="90,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+
+                    <Label Content="Sec. Address" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="SecAddTbox" HorizontalAlignment="Left" Height="23" Margin="90,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+
+                    <Label Content="Post Code" HorizontalAlignment="Left" Margin="273,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="PostCodeTbox" HorizontalAlignment="Left" Height="23" Margin="362,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+
+                    <Label Content="City" HorizontalAlignment="Left" Margin="307,57,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="CityTbox" HorizontalAlignment="Left" Height="23" Margin="362,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+
+                </Grid>
+            </GroupBox.Content>
+        </GroupBox>
         <!-- update or cancel button -->
-        <Button x:Name="UpdateMemberBtn" Content="Update" HorizontalAlignment="Left" Margin="363,424,0,0" VerticalAlignment="Top" Width="75" Click="UpdateMemberBtn_Click"/>
-        <Button x:Name="CancelFormBtn" Content="Cancel" HorizontalAlignment="Left" Margin="455,423,0,0" VerticalAlignment="Top" Width="75" Click="CancelFormBtn_Click"/>
+        <Button x:Name="UpdateMemberBtn" Content="Update" HorizontalAlignment="Left" Margin="363,427,0,0" VerticalAlignment="Top" Width="75" Click="UpdateMemberBtn_Click"/>
+        <Button x:Name="CancelFormBtn" Content="Cancel" HorizontalAlignment="Left" Margin="455,427,0,0" VerticalAlignment="Top" Width="75" Click="CancelFormBtn_Click"/>
     </Grid>
 </Window>

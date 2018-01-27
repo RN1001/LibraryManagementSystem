@@ -8,7 +8,7 @@
         xmlns:UC="clr-namespace:LibraryManagementSystem.Views.UserControls"
         HorizontalAlignment="Center" VerticalAlignment="Center"
         mc:Ignorable="d"
-        Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="1300" MaxHeight="600" MaxWidth="1300">
+        Title="Library Management System" MinHeight="600" MinWidth="950" Height="600" Width="1000" MaxHeight="600" MaxWidth="1300">
     <Grid>
         <!-- Main grid row and column defintions -->
         <Grid.ColumnDefinitions>
@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menu bar control -->
-        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1300" Grid.ColumnSpan="2">
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2">
             <MenuItem Header="File" Height="20" Width="37">
                 <MenuItem Header="Close" HorizontalAlignment="Left" Height="20" Width="150" Margin="0,0,-7,0" Click="MenuItem_Click"/>
             </MenuItem>
@@ -27,7 +27,7 @@
                 <MenuItem Header="About Author" HorizontalAlignment="Left" Height="25" Width="239" Margin="0,0,-3,0"/>
             </MenuItem>
         </Menu>
-        <Grid Margin="0,0,319,10">
+        <Grid Margin="0,10,169,10">
             <!-- Secondary grid Row and Column Definitions -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="86*" />
@@ -37,20 +37,18 @@
                 <RowDefinition Height="31*" />
                 <RowDefinition Height="21*" />
             </Grid.RowDefinitions>
-            
+
             <!-- stack panel list of buttons that call usercontrols -->
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <Button x:Name="ManageMembersBtn" Content="Manage Members" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageMembersBtn_Click"/>
                 <Button x:Name="ManageBooksBtn" Content="Manage Books" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageBooksBtn_Click"/>
                 <Button x:Name="ManageLoansBtn" Content="Manage Loans" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageLoansBtn_Click"/>
-                <Button x:Name="ManageFinesBtn" Content="Manage Fines" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ManageFinesBtn_Click"/>
                 <Button x:Name="ToolsBtn" Content="Tools" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ToolsBtn_Click"/>
                 <Button x:Name="ReportsBtn" Content="Reports" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="35" Click="ReportsBtn_Click"/>
             </StackPanel>
 
             <UC:ManageMembersUC x:Name="ManageMembersUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
             <UC:ManageBooksUC x:Name="ManageBooksUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
-            <UC:ManageFinesUC x:Name="ManageFinesUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
             <UC:ManageLoansUC x:Name="ManageLoansUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
             <UC:ToolsUC x:Name="ToolsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
             <UC:ReportsUC x:Name="ReportsUC" Grid.Column="1" Grid.Row="0" Margin="10,40,10,0" Visibility="Hidden"/>
@@ -65,18 +63,18 @@
             </StackPanel>
         </Grid>
         <!-- Tabcontrol with several datagrids contained within -->
-        <TabControl HorizontalAlignment="Left" Height="340" Margin="332,27,-101,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2">
+        <TabControl HorizontalAlignment="Left" Height="340" Margin="332,27,-101,0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2">
             <TabItem Header="Members">
                 <DataGrid x:Name="MemberDataGrid" Height="310" Margin="-4,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" ItemsSource="{Binding }" ToolTip="Click Load members to populate this grid"/>
             </TabItem>
             <TabItem Header="Books">
-                <DataGrid x:Name="BookDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Books' to populate this grid"/>
+                <DataGrid x:Name="BookDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Books' to populate this grid"/>
             </TabItem>
             <TabItem Header="Loans">
-                <DataGrid x:Name="LoanDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Loans' to populate this grid"/>
+                <DataGrid x:Name="LoanDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Loans' to populate this grid"/>
             </TabItem>
             <TabItem Header="Fines">
-                <DataGrid x:Name="FineDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="900" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Fines' to populate this grid">
+                <DataGrid x:Name="FineDataGrid" HorizontalAlignment="Left" Height="310" Margin="-5,-4,0,0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2" ItemsSource="{Binding}" ToolTip="Click 'Load Fines' to populate this grid">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Fine ID"/>
                         <DataGridTextColumn Header="Cost"/>
@@ -85,14 +83,14 @@
             </TabItem>
         </TabControl>
         <Label Content="Query Builder" HorizontalAlignment="Left" Margin="332,390,0,0" VerticalAlignment="Top"/>
-        <RichTextBox HorizontalAlignment="Left" Height="113" Margin="332,421,0,0" VerticalAlignment="Top" Width="784" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
+        <RichTextBox HorizontalAlignment="Left" Height="113" Margin="332,421,0,0" VerticalAlignment="Top" Width="532" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text=""/>
+                    
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
         <!-- executes queries from query builder rich text box-->
-        <Button x:Name="ExecuteQueryBtn" Content="Execute query" Grid.Column="1" HorizontalAlignment="Left" Margin="493,509,0,0" VerticalAlignment="Top" Width="99" Click="ExecuteQueryBtn_Click"/>
+        <Button x:Name="ExecuteQueryBtn" Content="Execute query" Grid.Column="1" HorizontalAlignment="Left" Margin="377,512,0,0" VerticalAlignment="Top" Width="99" Click="ExecuteQueryBtn_Click"/>
     </Grid>
 </Window>

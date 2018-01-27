@@ -10,19 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LibraryManagementSystem.Views.UserControls
+namespace LibraryManagementSystem.Views.LoansForms
 {
     /// <summary>
-    /// Interaction logic for ManageFinesUC.xaml
+    /// Interaction logic for CreateReservationForm.xaml
     /// </summary>
-    public partial class ManageFinesUC : UserControl
+    public partial class CreateReservationForm : Window
     {
-        public ManageFinesUC()
+        public CreateReservationForm()
         {
             InitializeComponent();
+        }
+
+        private void SearchMemberID_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchCopyID_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -43,5 +43,25 @@ namespace LibraryManagementSystem.Views.UserControls
             DeleteBookForm deletebookform = new DeleteBookForm();
             deletebookform.Show();
         }
+
+        private void AddBookSupplier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UpdateBookSupplier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteBookSupplier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BookLocation_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
