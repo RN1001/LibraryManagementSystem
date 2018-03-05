@@ -103,7 +103,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string UpdateQuery = "UPDATE book SET Lib_BookTitle = @title, Lib_Bookpages = @pages, Lib_BookEdition = @edition, Lib_BookCost = @cost WHERE .Lib_BookISBN = @isbn";
+            string UpdateQuery = "UPDATE books SET Lib_BookTitle = @title, Lib_Bookpages = @pages, Lib_BookEdition = @edition, Lib_BookCost = @cost WHERE .Lib_BookISBN = @isbn";
 
             db.cmd = new MySqlCommand(UpdateQuery, db.Conn);
 
@@ -135,7 +135,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string DeleteQuery = "DELETE FROM book WHERE Lib_bookISBN = @isbn";
+            string DeleteQuery = "DELETE FROM books WHERE Lib_bookISBN = @isbn";
 
             db.cmd = new MySqlCommand(DeleteQuery, db.Conn);
 
@@ -167,7 +167,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string SearchQuery = "SELECT Lib_BookTitle, Lib_BookPages, Lib_BookEdition, Lib_BookCost FROM book WHERE Lib_BookISBN = @bookID";
+            string SearchQuery = "SELECT Lib_BookTitle, Lib_BookPages, Lib_BookEdition, Lib_BookCost FROM books WHERE Lib_BookISBN = @bookID";
 
             db.cmd = new MySqlCommand(SearchQuery, db.Conn);
 
@@ -212,7 +212,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string UpdateQuery = "UPDATE publisher SET Lib_PublisherName = @name, Lib_PublisherCity = @city, Lib_PublishedYear = @year WHERE Lib_PublisherID = @pubID";
+            string UpdateQuery = "UPDATE publishers SET Lib_PublisherName = @name, Lib_PublisherCity = @city, Lib_PublishedYear = @year WHERE Lib_PublisherID = @pubID";
 
             db.cmd = new MySqlCommand(UpdateQuery, db.Conn);
 
@@ -274,7 +274,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string SearchMemQuery = "SELECT Lib_PublisherName, Lib_PublisherCity, Lib_PublishedYear FROM publisher WHERE Lib_PublisherID = @pubID";
+            string SearchMemQuery = "SELECT Lib_PublisherName, Lib_PublisherCity, Lib_PublishedYear FROM publishers WHERE Lib_PublisherID = @pubID";
 
             db.cmd = new MySqlCommand(SearchMemQuery, db.Conn);
 
@@ -317,7 +317,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string UpdateQuery = "UPDATE author SET Lib_AuthorFirstname = @fname, Lib_AuthorMiddleName = @mname, Lib_AuthorLastname = @lname WHERE Lib_AuthorID = @authorID";
+            string UpdateQuery = "UPDATE authors SET Lib_AuthorFirstname = @fname, Lib_AuthorMiddleName = @mname, Lib_AuthorLastname = @lname WHERE Lib_AuthorID = @authorID";
 
             db.cmd = new MySqlCommand(UpdateQuery, db.Conn);
 
@@ -348,7 +348,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string DeleteQuery = "DELETE FROM author WHERE Lib_AuthorID = @authorID";
+            string DeleteQuery = "DELETE FROM authors WHERE Lib_AuthorID = @authorID";
 
             db.cmd = new MySqlCommand(DeleteQuery, db.Conn);
 
@@ -379,7 +379,7 @@ namespace LibraryManagementSystem.ViewModels
                 MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string SearchQuery = "SELECT Lib_AuthorFirstname, Lib_AuthorMiddleName, Lib_AuthorLastname FROM author WHERE Lib_AuthorID = @authorID";
+            string SearchQuery = "SELECT Lib_AuthorFirstname, Lib_AuthorMiddleName, Lib_AuthorLastname FROM authors WHERE Lib_AuthorID = @authorID";
 
             db.cmd = new MySqlCommand(SearchQuery, db.Conn);
 
@@ -615,7 +615,13 @@ namespace LibraryManagementSystem.ViewModels
                 throw;
             }
 
-            string getBookData = "SELECT Book.Lib_BookISBN AS isbn, Lib_BookTitle AS title, Lib_Bookpages AS Pages, Lib_BookEdition AS Edition, Lib_AuthorFirstname AS firstname, Lib_AuthorLastname AS lastname, Lib_PublisherName AS Publisher, Lib_PublishedYear AS year, Lib_GenreName AS genre, Lib_CopyAmount AS amount FROM book, author, publisher, genre, copy";
+            string getBookData = "SELECT B.Lib_BookISBN AS isbn, B.Lib_BookTitle AS title, B.Lib_Bookpages AS Pages, B.Lib_BookEdition AS Edition, A.Lib_AuthorFirstname AS firstname, A.Lib_AuthorLastname AS lastname, P.Lib_PublisherName AS Publisher, P.Lib_PublishedYear AS year, G.Lib_GenreName AS genre, C.Lib_CopyAmount AS amount " +
+                " FROM book B "+
+                "inner join authorbook AB on B.Lib_BookISBN = AB.Lib_BookISBN " +
+                "inner join author A on AB.Lib_AuthorID = A.Lib_AuthorID" +
+                "inner join publisher P on B.Lib_PublisherID = P.Lib_PublisherID " +
+                "inner join genre G on B.Lib_GenreID = G.Lib_GenreID " +
+                "inner join copy C on B.Lib_BookISBN = C.Lib_BookISBN; ";
 
             db.cmd = new MySqlCommand(getBookData, db.Conn);
 

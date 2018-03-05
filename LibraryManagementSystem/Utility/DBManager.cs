@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Utility
     class DBManager
     {
         private string Server = "localhost";
-        private string Database = "newlibrarydb";
+        private string Database = "lms_sql";
         private string Username = "root";
         private string Password = "root";
 

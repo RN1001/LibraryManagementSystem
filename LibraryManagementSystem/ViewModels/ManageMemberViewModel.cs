@@ -9,6 +9,8 @@ using System.Collections.Generic;
 namespace LibraryManagementSystem.ViewModels
 {
     /// <summary>
+    ///  
+    /// APPLICATION NEEDS CHANGING TO SUIT NEW DB
     /// 
     /// </summary>
     /// <seealso cref="LibraryManagementSystem.Utility.ObservableObject" />
@@ -231,7 +233,7 @@ namespace LibraryManagementSystem.ViewModels
                 System.Windows.Forms.MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
             
-            string InsertMem = "Insert into Member (Lib_MemberFirstname, Lib_MemberMiddleName, Lib_MemberLastname, Lib_MemberDOB, Lib_MemberAddress, Lib_MemberSecondAddress, Lib_MemberPostCode, Lib_MemberCity, Lib_MemberEmailAddress, Lib_MemberTelephone, Lib_MemberMobile, Lib_MemberTypeName)" +
+            string InsertMem = "Insert into Members (MemberFirstname, MemberMiddleName, _MemberLastname, MemberDOB, MemberAddress, MemberSecondAddress, MemberPostCode, MemberCity, MemberEmailAddress, MemberTelephone, MemberMobile, MemberTypeName)" +
                                " VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11)";
             db.cmd = new MySqlCommand(InsertMem, db.Conn);
             db.cmd.Parameters.AddWithValue("@0", Fname.Text);
@@ -282,7 +284,7 @@ namespace LibraryManagementSystem.ViewModels
                 System.Windows.Forms.MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string SearchMemQuery = "SELECT Lib_MemberFirstname, Lib_MemberMiddleName, Lib_MemberLastname, Lib_MemberDOB, Lib_MemberAddress, Lib_MemberSecondAddress, Lib_MemberPostCode, Lib_MemberCity, Lib_MemberEmailAddress, Lib_MemberTelephone, Lib_MemberMobile, Lib_MemberTypeName FROM member WHERE Lib_MemberID = @MemID";
+            string SearchMemQuery = "SELECT MemberFirstname, MemberMiddleName, MemberLastname, MemberDOB, MemberAddress, MemberSecondAddress, MemberPostCode, MemberCity, MemberEmailAddress, MemberTelephone, MemberMobile, MemberTypeName FROM member WHERE MemberID = @MemID";
 
             db.cmd = new MySqlCommand(SearchMemQuery, db.Conn);
 
@@ -292,18 +294,18 @@ namespace LibraryManagementSystem.ViewModels
             {
                 if (db.reader.Read())
                 {
-                    Fname.Text = (db.reader["Lib_MemberFirstname"]).ToString();
-                    Mname.Text = (db.reader["Lib_MemberMiddleName"]).ToString();
-                    Lname.Text = (db.reader["Lib_MemberLastname"]).ToString();
-                    Dob.Text = (db.reader["Lib_MemberDOB"]).ToString();
-                    PrimAdd.Text = (db.reader["Lib_MemberAddress"]).ToString();
-                    SecAdd.Text = (db.reader["Lib_MemberSecondAddress"]).ToString();
-                    PostCode.Text = (db.reader["Lib_MemberPostCode"]).ToString();
-                    City.Text = (db.reader["Lib_MemberCity"]).ToString();
-                    Email.Text = (db.reader["Lib_MemberEmailAddress"]).ToString();
-                    Telephone.Text = (db.reader["Lib_MemberTelephone"]).ToString();
-                    Mob.Text = (db.reader["Lib_MemberMobile"]).ToString();
-                    MemType.Text = (db.reader["Lib_MemberTypeName"]).ToString();
+                    Fname.Text = (db.reader["MemberFirstname"]).ToString();
+                    Mname.Text = (db.reader["MemberMiddleName"]).ToString();
+                    Lname.Text = (db.reader["MemberLastname"]).ToString();
+                    Dob.Text = (db.reader["MemberDOB"]).ToString();
+                    PrimAdd.Text = (db.reader["MemberAddress"]).ToString();
+                    SecAdd.Text = (db.reader["MemberSecondAddress"]).ToString();
+                    PostCode.Text = (db.reader["MemberPostCode"]).ToString();
+                    City.Text = (db.reader["MemberCity"]).ToString();
+                    Email.Text = (db.reader["MemberEmailAddress"]).ToString();
+                    Telephone.Text = (db.reader["MemberTelephone"]).ToString();
+                    Mob.Text = (db.reader["MemberMobile"]).ToString();
+                    MemType.Text = (db.reader["MemberTypeName"]).ToString();
                 }
                 else
                 {
@@ -337,7 +339,7 @@ namespace LibraryManagementSystem.ViewModels
                 System.Windows.Forms.MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string SearchMemQuery = "SELECT Lib_MemberFirstname, Lib_MemberMiddleName, Lib_MemberLastname, Lib_MemberAddress FROM member WHERE Lib_MemberID = @MemID";
+            string SearchMemQuery = "SELECT MemberFirstname, MemberMiddleName, MemberLastname, MemberAddress FROM member WHERE MemberID = @MemID";
 
             db.cmd = new MySqlCommand(SearchMemQuery, db.Conn);
 
@@ -347,10 +349,10 @@ namespace LibraryManagementSystem.ViewModels
             {
                 if (db.reader.Read())
                 {
-                    fname.Text = (db.reader["Lib_MemberFirstname"]).ToString();
-                    mname.Text = (db.reader["Lib_MemberMiddleName"]).ToString();
-                    lname.Text = (db.reader["Lib_MemberLastname"]).ToString();
-                    address.Text = (db.reader["Lib_MemberAddress"]).ToString();
+                    fname.Text = (db.reader["MemberFirstname"]).ToString();
+                    mname.Text = (db.reader["MemberMiddleName"]).ToString();
+                    lname.Text = (db.reader["MemberLastname"]).ToString();
+                    address.Text = (db.reader["MemberAddress"]).ToString();
                 }
                 else
                 {
@@ -393,9 +395,9 @@ namespace LibraryManagementSystem.ViewModels
             }
                        
 
-            string UpdateQuery = "UPDATE member SET Lib_MemberFirstname=@0, Lib_MemberMiddleName=@1, Lib_MemberLastname=@2, Lib_MemberDOB=@3, " +
-                                 "Lib_MemberAddress=@4, Lib_MemberSecondAddress=@5, Lib_MemberPostCode=@6, Lib_MemberCity=@7, Lib_MemberEmailAddress=@8, " +
-                                 "Lib_MemberTelephone=@9, Lib_MemberMobile=@10, Lib_MemberTypeName=@11 WHERE Lib_MemberID = @MemID";
+            string UpdateQuery = "UPDATE member SET MemberFirstname=@0, MemberMiddleName=@1, MemberLastname=@2, MemberDOB=@3, " +
+                                 "MemberAddress=@4, MemberSecondAddress=@5, MemberPostCode=@6, MemberCity=@7, MemberEmailAddress=@8, " +
+                                 "MemberTelephone=@9, MemberMobile=@10, MemberTypeName=@11 WHERE MemberID = @MemID";
             db.cmd = new MySqlCommand(UpdateQuery, db.Conn);
 
             db.cmd.Parameters.AddWithValue("@0", Fname.Text);
@@ -435,7 +437,7 @@ namespace LibraryManagementSystem.ViewModels
                 System.Windows.Forms.MessageBox.Show("Cannot connect to database, Please contact an Adminstrator.");
             }
 
-            string DeleteQuery = "DELETE FROM MEMBER WHERE Lib_MemberID = @MemberID";
+            string DeleteQuery = "DELETE FROM MEMBER WHERE MemberID = @MemberID";
 
             db.cmd = new MySqlCommand(DeleteQuery, db.Conn);
             db.cmd.Parameters.AddWithValue("@MemberID", MemberID.Text);
@@ -463,7 +465,7 @@ namespace LibraryManagementSystem.ViewModels
                 throw;                
             }
 
-            string GetMemberData = "SELECT Lib_MemberID AS ID, Lib_MemberFirstname AS Firstname, Lib_MemberMiddleName AS Middlename, Lib_MemberLastname AS Lastname, Lib_MemberDOB AS DOB, Lib_MemberAddress AS Address, Lib_MemberPostCode AS Post_Code, Lib_MemberCity AS City, Lib_MemberEmailAddress AS Email, Lib_MemberTelephone AS Telephone, Lib_MemberMobile AS Mobile, Lib_MemberTypeName AS Member_type FROM member";
+            string GetMemberData = "SELECT MemberID AS ID, MemberFirstname AS Firstname, MemberMiddleName AS Middlename, MemberLastname AS Lastname, MemberDOB AS DOB, MemberAddress AS Address, MemberPostCode AS Post_Code, MemberCity AS City, MemberEmailAddress AS Email, MemberTelephone AS Telephone, MemberMobile AS Mobile, MemberTypeName AS Member_type FROM member";
 
             db.cmd = new MySqlCommand(GetMemberData, db.Conn);
 
